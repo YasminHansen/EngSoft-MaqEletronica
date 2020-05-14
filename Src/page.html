@@ -1,0 +1,57 @@
+<html>
+<body>
+	<h2>Carteira</h2>
+	<p id="wallet"></p>
+
+	<h2>Máquina</h2>
+	<button type="button" onclick="AddMoney(0.5)">	
+	+ 0.50</button>	
+	<button type="button" onclick="AddMoney(1)">	
+	+ 1</button>
+	<button type="button" onclick="AddMoney(2)">	
+	+ 2</button>
+	<button type="button" onclick="AddMoney(5)">	
+	+ 5</button>	
+	<label id="balance" style="margin-left:5px"></label>
+	<br>
+	<br>
+	<button type="button" onclick="AddMoney(0)">	
+	Receber dinheiro de volta</button>	
+	<button type="button" onclick="ConfirmMoney()">	
+	Confirmar compra</button>	
+
+	<h2>Produtos</h2>
+	<p id="product0"></p> <p id="price0"></p> <p id="quantity0"></p>
+	<p id="product1"></p> <p id="price1"></p> <p id="quantity1"></p>
+	<p id="product2"></p> <p id="price2"></p> <p id="quantity2"></p>
+	<p id="product3"></p> <p id="price3"></p> <p id="quantity3"></p>
+	
+	<h1>Teclado</h1> 
+	<button type="button" style="width:35px" onclick="PressedNumber(1)">1</button>
+	<button type="button" style="width:35px" onclick="PressedNumber(2)">2</button>
+	<button type="button" style="width:35px" onclick="PressedNumber(3)">3</button>
+	<br>
+	<button type="button" style="width:35px" onclick="PressedNumber(4)">4</button>
+	<button type="button" style="width:35px" onclick="PressedNumber(5)">5</button>
+	<button type="button" style="width:35px" onclick="PressedNumber(6)">6</button>
+	<br>
+	<button type="button" style="width:35px" onclick="PressedNumber(7)">7</button>
+	<button type="button" style="width:35px" onclick="PressedNumber(8)">8</button>
+	<button type="button" style="width:35px" onclick="PressedNumber(9)">9</button>
+	<br>
+	<button type="button" style="width:35px" onclick="Cancel(1)">X</button>
+	<button type="button" style="width:35px" onclick="PressedNumber(0)">0</button>
+	<button type="button" style="width:35px" onclick="Confirm(1)">✓</button>
+	<p id="input"></p>
+	<p id="productName"></p>
+	<p id="productPrice"></p>
+	
+	<br>
+	<h3>Histórico</h3>
+	<p id="log"></p>
+	<button type="button" onclick="ClearLog()">Limpar</button>
+
+</body>
+	<script src="script.js"></script>
+	<script>WriteAll();</script>
+</html> 
