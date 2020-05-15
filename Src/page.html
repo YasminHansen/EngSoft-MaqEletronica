@@ -1,57 +1,93 @@
+<!DOCTYPE html>
 <html>
-<body>
-	<h2>Carteira</h2>
-	<p id="wallet"></p>
-
-	<h2>Máquina</h2>
-	<button type="button" onclick="AddMoney(0.5)">	
-	+ 0.50</button>	
-	<button type="button" onclick="AddMoney(1)">	
-	+ 1</button>
-	<button type="button" onclick="AddMoney(2)">	
-	+ 2</button>
-	<button type="button" onclick="AddMoney(5)">	
-	+ 5</button>	
-	<label id="balance" style="margin-left:5px"></label>
-	<br>
-	<br>
-	<button type="button" onclick="AddMoney(0)">	
-	Receber dinheiro de volta</button>	
-	<button type="button" onclick="ConfirmMoney()">	
-	Confirmar compra</button>	
-
-	<h2>Produtos</h2>
-	<p id="product0"></p> <p id="price0"></p> <p id="quantity0"></p>
-	<p id="product1"></p> <p id="price1"></p> <p id="quantity1"></p>
-	<p id="product2"></p> <p id="price2"></p> <p id="quantity2"></p>
-	<p id="product3"></p> <p id="price3"></p> <p id="quantity3"></p>
-	
-	<h1>Teclado</h1> 
-	<button type="button" style="width:35px" onclick="PressedNumber(1)">1</button>
-	<button type="button" style="width:35px" onclick="PressedNumber(2)">2</button>
-	<button type="button" style="width:35px" onclick="PressedNumber(3)">3</button>
-	<br>
-	<button type="button" style="width:35px" onclick="PressedNumber(4)">4</button>
-	<button type="button" style="width:35px" onclick="PressedNumber(5)">5</button>
-	<button type="button" style="width:35px" onclick="PressedNumber(6)">6</button>
-	<br>
-	<button type="button" style="width:35px" onclick="PressedNumber(7)">7</button>
-	<button type="button" style="width:35px" onclick="PressedNumber(8)">8</button>
-	<button type="button" style="width:35px" onclick="PressedNumber(9)">9</button>
-	<br>
-	<button type="button" style="width:35px" onclick="Cancel(1)">X</button>
-	<button type="button" style="width:35px" onclick="PressedNumber(0)">0</button>
-	<button type="button" style="width:35px" onclick="Confirm(1)">✓</button>
-	<p id="input"></p>
-	<p id="productName"></p>
-	<p id="productPrice"></p>
-	
-	<br>
-	<h3>Histórico</h3>
-	<p id="log"></p>
-	<button type="button" onclick="ClearLog()">Limpar</button>
-
-</body>
-	<script src="script.js"></script>
-	<script>WriteAll();</script>
+	<head>
+		<meta charset='utf-8'>
+		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+		<title>Page Title</title>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<link rel='stylesheet' href='style.css'>
+		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		<script src='main.js'></script>
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="machine-title">Máquina de vendas</h1>
+			<div class="machine-content row">
+				<div class="machine-display col-8">
+					<div class="machine-products">
+						<p class="product" id="product0"></p> <p id="price0"></p> <p id="quantity0"></p>
+						<p class="product" id="product1"></p> <p id="price1"></p> <p id="quantity1"></p>
+						<p class="product" id="product2"></p> <p id="price2"></p> <p id="quantity2"></p>
+						<p class="product" id="product3"></p> <p id="price3"></p> <p id="quantity3"></p>
+						<p class="product" >Teste</p>
+						<p class="product" >Teste</p>
+						<p class="product" >Teste</p>
+						<p class="product" >Teste</p>
+						<p class="product" >Teste</p>
+						<p class="product" >Teste</p>
+						<p class="product" >Teste</p>
+						<p class="product" >Teste</p>
+						<p class="product" >Teste</p>
+						<p class="product" >Teste</p>
+						<p class="product" >Teste</p>
+					</div>
+				</div>
+				<div class="machine-options col-4">
+					<div class="keyboard-product">
+						<div class="keyboard-info">
+							<p id="input"></p>
+							<p id="productName"></p>
+							<p id="productPrice"></p>
+							<div class="keyboard-buttons">
+								<button type="button" onclick="PressedNumber(1)">1</button>
+								<button type="button" onclick="PressedNumber(2)">2</button>
+								<button type="button" onclick="PressedNumber(3)">3</button>
+								<br>
+								<button type="button" onclick="PressedNumber(4)">4</button>
+								<button type="button" onclick="PressedNumber(5)">5</button>
+								<button type="button" onclick="PressedNumber(6)">6</button>
+								<br>
+								<button type="button" onclick="PressedNumber(7)">7</button>
+								<button type="button" onclick="PressedNumber(8)">8</button>
+								<button type="button" onclick="PressedNumber(9)">9</button>
+								<br>
+								<button class="cancel" type="button" onclick="Cancel(1)">X</button>
+								<button type="button" onclick="PressedNumber(0)">0</button>
+								<button class="confirm" type="button" onclick="Confirm(1)">✓</button>
+							</div>
+						</div>
+					</div>
+					<div class="keyboard-payment">
+						<button type="button" onclick="AddMoney(0.5)">	
+						+ 0.50</button>	
+						<button type="button" onclick="AddMoney(1)">	
+						+ 1</button>
+						<button type="button" onclick="AddMoney(2)">	
+						+ 2</button>
+						<button type="button" onclick="AddMoney(5)">	
+						+ 5</button>	
+						<label id="balance" style="margin-left:5px"></label>
+						<br>
+						<br>
+						<button type="button" onclick="AddMoney(0)">	
+						Receber dinheiro de volta</button>	
+						<button type="button" onclick="ConfirmMoney()">	
+						Confirmar compra</button>	
+					</div>
+				</div>
+			
+				<h3>Histórico</h3>
+				<p id="log"></p>
+				<button type="button" onclick="ClearLog()">Limpar</button>
+				<div class="wallet">
+					<h1><i class="fas fa-money-bill-alt"></i>Carteira</h1>
+					<p id="wallet"></p>
+					
+				</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+		<script>WriteAll();</script>
+	</body>
 </html> 
