@@ -5,32 +5,32 @@
 		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
 		<title>Page Title</title>
 		<meta name='viewport' content='width=device-width, initial-scale=1'>
-		<link rel='stylesheet' href='style.css'>
+		<link rel='stylesheet' href='style2.css'>
 		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 		<script src='main.js'></script>
 	</head>
 	<body>
-		<div class="container">
-			<h1 class="machine-title">Máquina de vendas</h1>
+		<div class="container-fluid">
 			<div class="machine-content row">
 				<div class="machine-display col-8">
+					<h1 class="machine-title">Máquina de vendas</h1>
 					<div class="machine-products">
-						<p class="product" id="product0"></p> <p id="price0"></p> <p id="quantity0"></p>
-						<p class="product" id="product1"></p> <p id="price1"></p> <p id="quantity1"></p>
-						<p class="product" id="product2"></p> <p id="price2"></p> <p id="quantity2"></p>
-						<p class="product" id="product3"></p> <p id="price3"></p> <p id="quantity3"></p>
-						<p class="product" >Teste</p>
-						<p class="product" >Teste</p>
-						<p class="product" >Teste</p>
-						<p class="product" >Teste</p>
-						<p class="product" >Teste</p>
-						<p class="product" >Teste</p>
-						<p class="product" >Teste</p>
-						<p class="product" >Teste</p>
-						<p class="product" >Teste</p>
-						<p class="product" >Teste</p>
-						<p class="product" >Teste</p>
+						<div class="product" id="product0" onClick="totalProduct()"></div>
+						<div class="product" id="product1" onClick="totalProduct()"></div>
+						<div class="product" id="product2" onClick="totalProduct()"></div>
+						<div class="product" id="product3" onClick="totalProduct()"></div>
+						<div class="product"><p >Teste</p></div>
+						<div class="product"><p >Teste</p></div>
+						<div class="product"><p >Teste</p></div>
+						<div class="product"><p >Teste</p></div>
+						<div class="product"><p >Teste</p></div>
+						<div class="product"><p >Teste</p></div>
+						<div class="product"><p >Teste</p></div>
+						<div class="product"><p >Teste</p></div>
+						<div class="product"><p >Teste</p></div>
+						<div class="product"><p >Teste</p></div>
+						<div class="product"><p >Teste</p></div>
 					</div>
 				</div>
 				<div class="machine-options col-4">
@@ -77,14 +77,16 @@
 					</div>
 				</div>
 			
+				<div class="wallet">
+					<div class="wallet-intern">
+						<p><i class="fas fa-money-bill-alt"></i></p>
+						<p id="wallet"></p>
+					</div>
+				</div>
+
 				<h3>Histórico</h3>
 				<p id="log"></p>
 				<button type="button" onclick="ClearLog()">Limpar</button>
-				<div class="wallet">
-					<h1><i class="fas fa-money-bill-alt"></i>Carteira</h1>
-					<p id="wallet"></p>
-					
-				</div>
 			</div>
 		</div>
 		<script src="script.js"></script>

@@ -1,0 +1,84 @@
+/*
+darkgreen: #5b9e99
+lightgreen: #9dd3d2
+lightpink: #de95ab
+pink: #f75f94
+snowwhite: #FFFCFF;
+orange: #FA7E61
+lightorange: #FEE1C7
+paradisepink: #F44174
+*/
+
+body{
+    background: #FFFCFF !important;
+    padding: 0 15px;
+}
+.container .machine-title{
+    font-family: 'Poppins', sans-serif;
+}
+
+/*-----MACHINE TITLE------*/
+.machine-title{
+    color: #000;
+    font-weight: bold;
+    margin: 30px 0;
+    animation: animate 2s linear infinite;
+}
+@keyframes animate{
+    0%, 100%{
+        color: #fff;
+        filter: blur(1px);
+        text-shadow: 0 0 10px #de95ab,
+                     0 0 20px #de95ab,
+                     0 0 30px #de95ab,
+                     0 0 40px #de95ab,
+                     0 0 50px #de95ab;
+    }
+
+    50%{
+        color: #fff;
+        filter: blur(1px);
+        text-shadow: 0 0 10px #F44174,
+                     0 0 20px #F44174,
+                     0 0 30px #F44174,
+                     0 0 40px #F44174,
+                     0 0 50px #F44174;
+    }
+}
+
+
+/*------MACHINE PRODUCTS---------*/
+.machine-display{
+    margin-top: 50px;
+    background-color: #9dd3d2;
+    border: 2px solid;
+    text-align: center;
+    border-color:  #5b9e99 #3d6a71 #3d6a71 #5b9e99 ;
+    border-radius: 10px;
+}
+.machine-products{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #FFFCFF;
+    border: 2px solid;
+    border-color: #5b9e99 #3d6a71 #3d6a71 #5b9e99 ;
+    border-radius: 15px;
+    margin: 25px 10px;
+}
+.machine-products .product{
+    border: 1px solid;
+    width: 210px;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.machine-products .product #total-product{
+    display: none;
+}
+.machine-products .product #total-product:hover{
+    display: block;
+}
+.machine-products .product:hover{
+    border: 1px solid #5b9e99;
+}

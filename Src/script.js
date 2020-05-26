@@ -143,13 +143,10 @@ function WriteInput(){
 }
 
 function WriteProducts(){
-	document.getElementById("product0").innerHTML = codes[0] + "- " + products[0] + "........Custo: R$ " + prices[0] + " | " + quantities[0] + " restantes";
-	
-	document.getElementById("product1").innerHTML = codes[1] + "- " +  products[1] + ".....Custo: R$ " + prices[1] + " | " + quantities[1] + " restantes";
-	
-	document.getElementById("product2").innerHTML = codes[2] + "- " +  products[2] + "...Custo: R$ " + prices[2] + " | " + quantities[2] + " restantes";
-	
-	document.getElementById("product3").innerHTML = codes[3] + "- " +  products[3] + "..........Custo: R$ " + prices[3] + " | " + quantities[3] + " restantes";
+	document.getElementById("product0").innerHTML = "<p>" + codes[0] + " - " + products[0] + "</p><p> Custo: R$ " + prices[0] + "</p><p id='total-product'>" + quantities[0] + " restantes</p>";
+	document.getElementById("product1").innerHTML = "<p>" + codes[1] + " - " + products[1] + "</p><p> Custo: R$ " + prices[1] + "</p><p id='total-product'>" + quantities[1] + " restantes</p>";
+	document.getElementById("product2").innerHTML = "<p>" + codes[2] + " - " + products[2] + "</p><p> Custo: R$ " + prices[2] + "</p><p id='total-product'>" + quantities[2] + " restantes</p>";
+	document.getElementById("product3").innerHTML = "<p>" + codes[3] + " - " + products[3] + "</p><p> Custo: R$ " + prices[3] + "</p><p id='total-product'>" + quantities[3] + " restantes</p>";
 }
 
 function WriteWallet(){
@@ -170,3 +167,10 @@ function WriteLog(string){
 function ClearLog(){
 	document.getElementById("log").innerHTML = "";
 }
+
+// function totalProduct(){
+// 	if(document.getElementById("total-product").style.display === "block")
+// 		document.getElementById("total-product").style.display = "none";
+// 	else
+// 		document.getElementById("total-product").style.display = "block";
+// }

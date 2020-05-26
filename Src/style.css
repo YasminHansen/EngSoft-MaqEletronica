@@ -88,7 +88,7 @@ body{
 /*------MACHINE OPTIONS------*/
 
 .machine-options .keyboard-payment{
-    background-color: gray;
+    background-color: #CCC;
     margin: auto;
 }
 
@@ -129,7 +129,7 @@ body{
     margin: auto;
     width: auto;
     text-align: center;
-    background-color: grey;
+    background-color: #CCC;
     padding: 20px;;
 }
 .keyboard-product .keyboard-buttons button{
@@ -147,4 +147,33 @@ body{
 }
 .keyboard-product .keyboard-buttons button:hover{
 
+}
+
+
+/*------MACHINE WALLET ------*/
+.machine-content .wallet{
+    width: 100%;
+    color: #fff;
+    justify-content: end;
+    display: flex;
+    margin-top: 20px;
+}
+.machine-content .wallet .wallet-intern{
+    display: flex;
+    justify-content: end;
+    border-radius: 15px;
+    background-color: #570000;
+    color: #fff;
+    padding: 10px;
+    font-size: 20px;
+
+}
+.machine-content .wallet .wallet-intern p {
+    margin: 0;
+}
+.machine-content .wallet .wallet-intern .fas{
+    margin-right: 10px;
+    font-size: 30px;
+    color: #51CE69;
+    text-shadow: 2px 2px 15px #071702;
 }
