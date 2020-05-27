@@ -131,7 +131,7 @@
 		  
 
 
-
+		<!-- RESTRICT AREA -->
 		 <div class="modal fade modal-restrict-area" id="modal-restrict-area" tabindex="-1" role="dialog" aria-labelledby="restrictarea" aria-hidden="true">
 			<div class="modal-dialog" role="document">
 			  <div class="modal-content">
@@ -235,10 +235,19 @@
 						<div class="title-vendor-login">
 							<h3><i class="fas fa-user"></i> Abastecedor</h3>
 						</div>
-						<div class="">
-							<button onclick="goToSupplierInsert()">Inserir</button>
-							<button onclick="goToSupplierEdit()">Editar</button>
-							<button onclick="goToSupplierRemove()">Remover</button>
+						<div class="options">
+							<div>
+								<p>Inserir</p>
+								<button onclick="goToSupplierInsert()"><i class="fas fa-sign-in-alt"></i></button>
+							</div>
+							<div>
+								<p>Editar</p>
+								<button onclick="goToSupplierEdit()"><i class="fas fa-edit"></i></button>
+							</div>
+							<div>
+								<p>Remover</p>
+								<button onclick="goToSupplierRemove()"><i class="fas fa-sign-out-alt"></i></button>
+							</div>
 						</div>
 					</div>
 
@@ -246,16 +255,24 @@
 						<div class="title-vendor-login">
 							<h3><i class="fas fa-user"></i> Abastecedor</h3>
 						</div>
-						<div class="">
-							<p>Adicionar produto</p>
-							<label>Código: </label>
-							<input>
-							<label>Nome: </label>
-							<input>
-							<label>Preço:</label>
-							<input>
-							<label>Quantidade:</label>
-							<input>
+						<p>Adicionar produto</p>
+						<div class="supplier-insert-info">
+							<div>
+								<label class="col-5">Código: </label>
+								<input class="col-7 form-control">
+							</div>
+							<div>
+								<label class="col-5">Nome: </label>
+								<input class="col-7 form-control">
+							</div>
+							<div>
+								<label class="col-5">Preço:</label>
+								<input class="col-7 form-control">
+							</div>
+							<div>
+								<label class="col-5">Quantidade:</label>
+								<input class="col-7 form-control">
+							</div>
 							<button>Confirmar</button>
 						</div>
 					</div>
@@ -264,16 +281,24 @@
 						<div class="title-vendor-login">
 							<h3><i class="fas fa-user"></i> Abastecedor</h3>
 						</div>
-						<div class="">
-							<p>Editar produto</p>
-							<label>Código: </label>
-							<input>
-							<label>Nome: </label>
-							<input>
-							<label>Preço:</label>
-							<input>
-							<label>Quantidade:</label>
-							<input>
+						<p>Editar produto</p>
+						<div class="supplier-edit-info">
+							<div>
+								<label class="col-5">Código: </label>
+								<input class="col-7 form-control">
+							</div>
+							<div>
+								<label class="col-5">Nome: </label>
+								<input class="col-7 form-control">
+							</div>
+							<div>
+								<label class="col-5">Preço:</label>
+								<input class="col-7 form-control">
+							</div>
+							<div>
+								<label class="col-5">Quantidade:</label>
+								<input class="col-7 form-control">
+							</div>
 							<button>Confirmar</button>
 						</div>
 					</div>
@@ -282,9 +307,12 @@
 						<div class="title-vendor-login">
 							<h3><i class="fas fa-user"></i> Abastecedor</h3>
 						</div>
-						<div class="">
-							<p>Remover produto</p>
-							<label>Código: </label>
+						<p>Remover produto</p>
+						<div class="supplier-remove-info">
+							<div>
+								<label class="col-5">Código:</label>
+								<input class="col-7 form-control">
+							</div>
 							<button>Confirmar</button>
 						</div>
 					</div>
@@ -297,7 +325,7 @@
 		  </div>
 
 
-
+		<!-- TELEPHONE -->
 		  <div class="modal fade modal-telephone-area" id="modal-telephone-area" tabindex="-1" role="dialog" aria-labelledby="telephonearea" aria-hidden="true">
 			<div class="modal-dialog" role="document">
 			  <div class="modal-content">
@@ -308,11 +336,12 @@
 				  </button>
 				</div>
 				<div class="modal-body">
-				
+					<div class="">
+
+					</div>
 				</div>
 				<div class="modal-footer">
 				  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				  <button type="button" class="btn btn-primary">Save changes</button>
 				</div>
 			  </div>
 			</div>

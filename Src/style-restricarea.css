@@ -90,7 +90,6 @@
 }
 
 /*-----SUPPLIER-------*/
-/*----VENDOR LOGIN----*/
 .modal-restrict-area .supplier-login,
 .modal-restrict-area .supplier-options,
 .modal-restrict-area .supplier-insert,
@@ -98,12 +97,77 @@
 .modal-restrict-area .supplier-remove{
     display: none;
 }
-/* .modal-restrict-area .supplier-options{
-    display: none;
+/*----VENDOR LOGIN----*/
+.modal-restrict-area .supplier-login{
+    text-align: center;
 }
-.modal-restrict-area .supplier-insert{
-    display: none;
+.modal-restrict-area .supplier-login .info-supplier-login{
+    display: flex;
+    flex-direction: column;
 }
-.modal-restrict-area .supplier-edit{
-    display: none;
-} */
+.modal-restrict-area .supplier-login .info-supplier-login input{
+    width: 250px;
+    margin: 5px auto;
+}
+.modal-restrict-area .supplier-login .info-supplier-login button{
+    width: max-content;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+/*----VENDOR OPTIONS----*/
+.modal-restrict-area .supplier-options .options{
+    display: flex;
+    justify-content: space-around;
+}
+.modal-restrict-area .supplier-options .options div {
+    text-align: center;
+}
+.modal-restrict-area .supplier-options .options div p{
+    margin-bottom: 0;
+}
+.modal-restrict-area .supplier-options .options div button{
+    background-color: #e8655f;
+    color: #fff;
+    border: none;
+    width: 115px;
+    height: 99px;
+    border-radius: 10px;
+    font-size: 35px;
+}
+
+/*----VENDOR INSERT / EDIT / REMOVE  ----*/
+.modal-restrict-area .supplier-insert p,
+.modal-restrict-area .supplier-edit p,
+.modal-restrict-area .supplier-remove p{
+    text-align: center;
+}
+.modal-restrict-area .supplier-insert button,
+.modal-restrict-area .supplier-edit button,
+.modal-restrict-area .supplier-remove button{
+    margin: auto;
+}
+.modal-restrict-area .supplier-insert .supplier-insert-info,
+.modal-restrict-area .supplier-edit .supplier-edit-info,
+.modal-restrict-area .supplier-remove .supplier-remove-info{
+    width: 300px;
+    text-align: center;
+    margin: auto;
+}
+.modal-restrict-area .supplier-insert .supplier-insert-info button,
+.modal-restrict-area .supplier-edit .supplier-edit-info button,
+.modal-restrict-area .supplier-remove .supplier-remove-info button{
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.modal-restrict-area .supplier-insert .supplier-insert-info div,
+.modal-restrict-area .supplier-edit .supplier-edit-info div,
+.modal-restrict-area .supplier-remove .supplier-remove-info div{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+}
+.modal-restrict-area .supplier-insert .supplier-insert-info div label,
+.modal-restrict-area .supplier-edit .supplier-edit-info div label,
+.modal-restrict-area .supplier-remove .supplier-remove-info div label{
+    text-align: center;
+}
