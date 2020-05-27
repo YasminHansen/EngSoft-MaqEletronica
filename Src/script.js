@@ -384,7 +384,7 @@ function WriteBalance(){
 function WriteInput(){
 	document.getElementById("input").innerHTML = input;
 	document.getElementById("productName").innerHTML = productName;
-	document.getElementById("productPrice").innerHTML = productPrice;
+	document.getElementById("productPrice").innerHTML = '<i class="fas fa-dollar-sign"></i> ' + productPrice;
 }
 
 /*Escreve os produtos e suas informações na máquina*/
