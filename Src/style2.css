@@ -133,5 +133,54 @@ body{
     background-color: #fff;
     border-top-right-radius: 15px;
 }
+.machine-content .machine-options .keyboard-info{
+    margin-top: 30px;
+} 
+.machine-content .machine-options .keyboard-product-info{
+    display: flex;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 0;
+    border-radius: 10px;
+}
 
+.machine-content .machine-options .keyboard-product-info .input{
+    margin: auto;
+}
+.machine-content .machine-options .keyboard-product-info .input p{
+    background-color: #fff;
+    color: #df983e;
+    font-size: 30px;
+    margin: 0;
+    height: 55px;
+    border-radius: 10px;
+}
+.machine-content .machine-options .keyboard-product-info .info{
+    text-align: left;
+}
+.machine-content .machine-options .keyboard-product-info .info p{
+    margin-bottom: 0;
+}
+.machine-content .machine-options .keyboard-buttons{
+    margin: 15px 0 15px auto;
+    background-color: #88a972;
+    width: max-content;
+    padding: 15px;
+    border-radius: 15px;
+}
+.machine-content .machine-options .keyboard-buttons button{
+    font-size: 20px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    margin: 2px 5px;
+}
 
+.machine-content .machine-options .keyboard-payment{
+    background-color: #f76e68;
+    margin: 15px 0;
+}
+.machine-content .machine-options .keyboard-payment .keyboard-payment-options{
+    font-size: 50px;
+    color: #fff;
+}

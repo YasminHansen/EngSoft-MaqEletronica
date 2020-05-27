@@ -376,9 +376,9 @@ function WriteBalance(){
 
 /*Escreve o produto sendo selecionado*/
 function WriteInput(){
-	document.getElementById("input").innerHTML = "Código do Produto: " + input;
-	document.getElementById("productName").innerHTML = "Produto Selecionado: " + productName;
-	document.getElementById("productPrice").innerHTML = "Preço Produto: " + productPrice;
+	document.getElementById("input").innerHTML = input;
+	document.getElementById("productName").innerHTML = productName;
+	document.getElementById("productPrice").innerHTML = productPrice;
 }
 
 /*Escreve os produtos e suas informações na máquina*/

@@ -44,9 +44,15 @@
 				<div class="machine-options col-3">
 					<div class="keyboard-product">
 						<div class="keyboard-info">
-							<p id="input"></p>
-							<p id="productName"></p>
-							<p id="productPrice"></p>
+							<div class="keyboard-product-info">
+								<div class="input col-5">
+									<p id="input"></p>	
+								</div>							
+								<div class="info col-7">
+									<p id="productName"></p>
+									<p id="productPrice"></p>
+								</div>
+							</div>
 							<div class="keyboard-buttons">
 								<button type="button" onclick="PressedNumber(1)">1</button>
 								<button type="button" onclick="PressedNumber(2)">2</button>
@@ -66,23 +72,28 @@
 							</div>
 						</div>
 					</div>
-					<div class="keyboard-payment">
-						<button type="button" onclick="AddMoney(0.5)">	
-						+ 0.50</button>	
-						<button type="button" onclick="AddMoney(1)">	
-						+ 1</button>
-						<button type="button" onclick="AddMoney(2)">	
-						+ 2</button>
-						<button type="button" onclick="AddMoney(5)">	
-						+ 5</button>	
-						<label id="balance" style="margin-left:5px"></label>
-						<br>
-						<br>
-						<button type="button" onclick="AddMoney(0)">	
-						Receber dinheiro de volta</button>	
-						<button type="button" onclick="ConfirmMoney()">	
-						Confirmar compra</button>	
+					<div class="keyboard-payment row">
+						<div class="keyboard-payment-options col-4">
+							<i class="far fa-caret-square-up"></i>
+						</div>
+						<div class="keyboard-payment-values col-8">
+							<button type="button" onclick="AddMoney(0.5)">	
+							+ 0.50</button>	
+							<button type="button" onclick="AddMoney(1)">	
+							+ 1</button>
+							<button type="button" onclick="AddMoney(2)">	
+							+ 2</button>
+							<button type="button" onclick="AddMoney(5)">	
+							+ 5</button>	
+						</div>
 					</div>
+					<label id="balance" style="margin-left:5px"></label>
+					<br>
+					<br>
+					<button type="button" onclick="AddMoney(0)">	
+					Receber dinheiro de volta</button>	
+					<button type="button" onclick="ConfirmMoney()">	
+					Confirmar compra</button>	
 				</div>
 				<i class="fas fa-dollar-sign"></i>
 			</div>
