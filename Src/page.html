@@ -6,6 +6,7 @@
 		<title>Page Title</title>
 		<meta name='viewport' content='width=device-width, initial-scale=1'>
 		<link rel='stylesheet' href='style2.css'>
+		<link rel='stylesheet' href='style-restricarea.css'>
 		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 		<script type="text/javascript" src="data.js"x></script>
@@ -14,9 +15,11 @@
 	</head>
 	<body>
 		<div class="container">
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-restrict-area">
-				<i class="fas fa-lock"></i>
-			</button>
+			<div class="modal-class" data-toggle="tooltip" data-toggle="tooltip" data-placement="bottom" title="Área restrita">
+				<button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-restrict-area">
+					<i class="fas fa-lock"></i>
+				</button>
+			</div>
 
 			<div class="machine-content row">
 				<div class="machine-title-box">
@@ -69,28 +72,40 @@
 					</div>
 					<div class="keyboard-payment row">
 						<div class="keyboard-payment-options col-4">
-							<i class="far fa-caret-square-up"></i>
+							<button type="button" onclick="ConfirmMoney()" data-toggle="tooltip" data-placement="bottom" title="Confirmar">	
+								<i class="far fa-caret-square-up"></i>
+							</button>
+							<button type="button" onclick="AddMoney(0)" data-toggle="tooltip" data-placement="bottom" title="Receber dinheiro de volta">	
+								<i class="fas fa-undo-alt"></i>
+							</button>	
 						</div>
 						<div class="keyboard-payment-values col-8">
+							<label id="balance" class="total-balance"></label>
 							<button type="button" onclick="AddMoney(0.5)">	
-							+ 0.50</button>	
+								<i class="fas fa-dollar-sign"></i> 0.50</button>	
 							<button type="button" onclick="AddMoney(1)">	
-							+ 1</button>
+								<i class="fas fa-dollar-sign"></i> 1.00</button>
 							<button type="button" onclick="AddMoney(2)">	
-							+ 2</button>
+								<i class="fas fa-dollar-sign"></i> 2.00</button>
 							<button type="button" onclick="AddMoney(5)">	
-							+ 5</button>	
+								<i class="fas fa-dollar-sign"></i> 5.00</button>	
 						</div>
 					</div>
-					<label id="balance" style="margin-left:5px"></label>
-					<br>
-					<br>
-					<button type="button" onclick="AddMoney(0)">	
-					Receber dinheiro de volta</button>	
-					<button type="button" onclick="ConfirmMoney()">	
-					Confirmar compra</button>	
 				</div>
-				<i class="fas fa-dollar-sign"></i>
+				<div class="take-products col-12">
+					<div class="row">
+						<div class="remove-products col-9" data-toggle="tooltip" data-placement="bottom" title="Retirar produto">
+							<i class="fas fa-hand-holding"></i>
+						</div>
+						<div class="money col-3"  data-toggle="tooltip" data-placement="bottom" title="Troco">
+							<i class="fas fa-coins"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="machine-bottom">
+				<div class="machine-foot"></div>
+				<div class="machine-foot"></div>
 			</div>
 		</div>
 		<div class="wallet">

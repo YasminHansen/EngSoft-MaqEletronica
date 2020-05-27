@@ -21,11 +21,14 @@ body{
 .container .machine-title{
     font-family: 'Poppins', sans-serif;
 }
-
-/*-------------MODAL AREA RESTRITA ---------------*/
-.modal-restrict-area{
-    z-index: 99999 !important;
+.container .modal-class{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
 }
+/*-------------MODAL AREA RESTRITA ---------------*/
+
 /*-----MACHINE TITLE------*/
 .machine-title-box{
     position: absolute;
@@ -77,15 +80,11 @@ body{
     border-color: #f98883 #994440  #994440  #f98883;
 
     text-align: center;
-
+    padding-right: 15px;
     border-radius: 5px;
 }
 
 /*------MACHINE PRODUCTS---------*/
-.machine-display{
-
-}
-
 
 .machine-products{
     display: flex;
@@ -132,6 +131,8 @@ body{
     margin-top: 50px;
     background-color: #fff;
     border-top-right-radius: 15px;
+    border: 2px solid #ffb2af;
+    padding-bottom: 45px;
 }
 .machine-content .machine-options .keyboard-info{
     margin-top: 30px;
@@ -142,7 +143,10 @@ body{
     color: #fff;
     padding: 10px 0;
     border-radius: 10px;
+    border-top: 2px solid #b9b9b9;
+    border-left: 2px solid #b9b9b9;
 }
+
 
 .machine-content .machine-options .keyboard-product-info .input{
     margin: auto;
@@ -167,6 +171,8 @@ body{
     width: max-content;
     padding: 15px;
     border-radius: 15px;
+    border-left: 2px solid #c7d9ba;
+    border-top: 2px solid #c7d9ba;
 }
 .machine-content .machine-options .keyboard-buttons button{
     font-size: 20px;
@@ -175,12 +181,94 @@ body{
     border-radius: 50px;
     margin: 2px 5px;
 }
+.machine-content .machine-options .keyboard-buttons button:hover{
+    background-color:#dfdede ;
+}
 
 .machine-content .machine-options .keyboard-payment{
     background-color: #f76e68;
     margin: 15px 0;
+    border-radius: 15px;
+    border-left: 2px solid #ffb2af;
+    border-top: 2px solid #ffb2af;
 }
-.machine-content .machine-options .keyboard-payment .keyboard-payment-options{
+.machine-content .machine-options .keyboard-payment .total-balance{
+    background-color: #fff;
+    padding: 5px 25px;
+    border-radius: 5px;
+}
+.machine-content .machine-options .keyboard-payment .keyboard-payment-options {
+    padding-bottom: 20px;
+}
+.machine-content .machine-options .keyboard-payment .keyboard-payment-options button{
+    background-color: unset;
+    border: none;
     font-size: 50px;
     color: #fff;
+}
+.machine-content .machine-options .keyboard-payment .keyboard-payment-options button:nth-child(2){
+    font-size: 20px;
+    border: 5px solid #fff;
+    border-radius: 5px;
+    margin-left: 8px;
+    height: 48px;
+    padding: 0 7px;
+}
+.machine-content .machine-options .keyboard-payment .keyboard-payment-options button:hover,
+.machine-content .machine-options .keyboard-payment .keyboard-payment-options button:nth-child(2):hover{
+    color: #000;
+    border-color: #000;
+}
+.machine-content .machine-options .keyboard-payment .keyboard-payment-values{
+    margin: auto;
+}
+.machine-content .machine-options .keyboard-payment .keyboard-payment-values button{
+    margin: 2px 0;
+    border-radius: 10px;
+}
+.machine-content .machine-options .keyboard-payment .keyboard-payment-values button:hover{
+    background-color: #dfdede;
+}
+/*---------TAKE PRODUCTS----------*/
+.machine-content .take-products{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.machine-content .take-products .remove-products{
+    color: #000;
+    font-size: 50px;
+}
+.machine-content .take-products .remove-products i{
+    background-color: #fff;
+    padding: 5px 180px 25px;
+    border-radius: 10px;
+    border: 2px solid #ffb2af;
+}
+.machine-content .take-products .money{
+    margin-top: auto;
+}
+.machine-content .take-products .money i{
+    background-color: #8acdf8;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    font-size: 35px;
+}
+.machine-bottom{
+    height: 25px;
+    background-color: #000;
+    margin: 0 -14px;
+    border-top: 4px solid #fff;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.machine-bottom .machine-foot{
+    background-color: #000;
+    width: 25px;
+    height: 40px;
+    margin: 0 40px;
+    border-radius: 5px;
 }
