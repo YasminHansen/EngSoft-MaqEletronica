@@ -7,7 +7,6 @@ var productPrice = "--";
 
 //passa pra products as infos do data.js
 var product = data;
-console.log(product);
 
 function BillsAndCoins(c50, c1, b2, b5){
 	this.c50 = c50;
@@ -58,65 +57,65 @@ function RemoveProduct(removedCode){
 
 function RemoveCodeByIndex(index){
 	
-	var oldValue = codes[index];
+	var oldValue = product[index].code;
 	var newValue = 0;
 	
-	if(index == (codes.length - 1)){
+	if(index == (product.length - 1)){
 		return oldValue;
 	}
 	else{
 		newValue = RemoveCodeByIndex(index + 1);
 	}
 	
-	codes[index] = newValue;
+	product[index].code = newValue;
 	return oldValue;
 }
 
 function RemoveProductByIndex(index){
 	
-	var oldValue = products[index];
+	var oldValue = product[index].name;
 	var newValue = 0;
 	
-	if(index == (products.length - 1)){
+	if(index == (product.length - 1)){
 		return oldValue;
 	}
 	else{
 		newValue = RemoveProductByIndex(index + 1);
 	}
 	
-	products[index] = newValue;
+	product[index].name = newValue;
 	return oldValue;
 }
 
 function RemovePriceByIndex(index){
 	
-	var oldValue = prices[index];
+	var oldValue = product[index].price;
 	var newValue = 0;
 	
-	if(index == (prices.length - 1)){
+	if(index == (product.length - 1)){
 		return oldValue;
 	}
 	else{
 		newValue = RemovePriceByIndex(index + 1);
 	}
 	
-	prices[index] = newValue;
+	product[index].price = newValue;
 	return oldValue;
 }
 
 function RemoveQuantityByIndex(index){
 	
-	var oldValue = quantities[index];
+	var oldValue = product[index].quantity;
 	var newValue = 0;
 	
-	if(index == (quantities.length - 1)){
+	if(index == (product.length - 1)){
 		return oldValue;
 	}
 	else{
 		newValue = RemoveQuantityByIndex(index + 1);
 	}
 	
-	quantities[index] = newValue;
+	product[index].quantity = newValue;
 	return oldValue;
 }
 
@@ -125,20 +124,20 @@ function FindProductIndex(code){
 	
 	for(var i=0; i < product.length; i++){
 		if(product[i].code == code){
-			index = product[i].code;
-			return index;
+			index = i;
+			return i;
 		}
 	}
 	return "X";
 }
 
 function NewProduct(newCode, newName, newPrice, newQuantity){
-	
+	//não sei se vai funcionar. Não sei se product[newCode].code.Push(newCode) tá certo
 	if(CheckExistingCode(newCode) == 0){
-		codes.Push(newCode);
-		products.Push(newName);
-		prices.Push(newPrice);
-		quantities.Push(newQuantity);
+		product[newCode].code.Push(newCode);
+		product[newCode].name.Push(newName);
+		product[newCode].price.Push(newPrice);
+		product[newCode].quantity.Push(newQuantity);
 	
 		WriteProducts();
 	}
@@ -149,16 +148,16 @@ function NewProduct(newCode, newName, newPrice, newQuantity){
 
 function AlterProduct(originalCode, alterCode, alterName, alterPrice, alterQuantity){
 	
-	for(var i=0; i < codes.length; i++){
-		if(codes[i] == originalCode){
-			codes[i] = alterCode;
-			products[i] = alterName;
-			prices[i] = alterPrice;
-			quantities[i] = alterQuantity;
+	for(var i=0; i < product.length; i++){
+		if(product[i].code == originalCode){
+			product[i].code = alterCode;
+			product[i].name = alterName;
+			product[i].price = alterPrice;
+			product[i].quantity = alterQuantity;
 			
 			break;
 		}
-		else if(i == (codes.length - 1)){
+		else if(i == (product.length - 1)){
 			alert("Não há produtos com esse código!");
 		}
 	}
@@ -169,8 +168,8 @@ function AlterProduct(originalCode, alterCode, alterName, alterPrice, alterQuant
 function CheckExistingCode(code){
 	var exists = 0;
 	
-	for(var i=0; i < codes.length; i++){
-		if(codes[i] == code){
+	for(var i=0; i < product.length; i++){
+		if(product[i].code == code){
 			exists = 1;
 			break;
 		}
@@ -186,8 +185,8 @@ function PressedNumber(num){
 	if(input == "--"){
 		input = num + "-";
 		tempInput = "0" + num;
-		for(var i=0; i < codes.length; i++){
-			if(codes[i] == tempInput){
+		for(var i=0; i < product.length; i++){
+			if(product[i].code == tempInput){
 				productName = product[i].name;
 				productPrice = product[i].price;
 			}
@@ -196,10 +195,10 @@ function PressedNumber(num){
 	else if(input.includes("-")){
 		input = input.replace("-", num);
 	
-		for(var i=0; i < codes.length; i++){
-			if(codes[i] == input){
-				productName = products[i];
-				productPrice = prices[i];
+		for(var i=0; i < product.length; i++){
+			if(product[i].code == input){
+				productName = product[i].name;
+				productPrice = product[i].price;				
 				break;
 			}
 			else{
@@ -226,6 +225,7 @@ function Confirm(){
 		
 		for(var i=0; i < product.length; i++){
 			if(product[i].code == productCode){
+
 				if(product[i].quantity > 0){
 					alert("Produto selecionado, insira o dinheiro!");
 				}
@@ -301,8 +301,7 @@ function ConfirmMoney(){
 				
 				if(result == 1){
 					for(var i=0; i < product.length; i++){
-						if(product[i].code == productCode){
-				
+						if(product[i].code == productCode){							
 							WriteLog("Comprou " + product[i].name + " por R$ " + product[i].price + " / O saldo total era de R$ " + balance + " / Devolveu troco de R$ " + (balance-prices[i]));
 							
 							walletMoney += (balance-product[i].price);
@@ -313,6 +312,7 @@ function ConfirmMoney(){
 							machineMoney.b5 += balanceMoney.b5;
 							
 							balance = 0;
+
 							product[i].quantity--;
 							
 							AddMoney(0);
@@ -327,10 +327,10 @@ function ConfirmMoney(){
 			}
 		}
 		else{
-			for(var i=0; i < codes.length; i++){
-				if(codes[i] == productCode){
+			for(var i=0; i < product.length; i++){
+				if(product[i].code == productCode){
 				
-					WriteLog("Comprou " + products[i] + " por R$ " + prices[i] + " / O saldo total era de R$ " + balance + " / Devolveu troco de R$ " + (balance-prices[i]));
+					WriteLog("Comprou " + product[i].name + " por R$ " + product[i].price + " / O saldo total era de R$ " + balance + " / Devolveu troco de R$ " + (balance-prices[i]));
 				
 					machineMoney.c50 += balanceMoney.c50;
 					machineMoney.c1 += balanceMoney.c1;
@@ -338,8 +338,7 @@ function ConfirmMoney(){
 					machineMoney.b5 += balanceMoney.b5;
 				
 					balance = 0;
-					quantities[i]--;
-					
+					product[i].quantity--;					
 					AddMoney(0);					
 					Cancel();
 				}
@@ -396,12 +395,6 @@ function WriteProducts(){
 		+ product[i].name + "</p><p class='product-value'> Custo: R$ " + product[i].price 
 		+ "</p><p class='total-product' id='total-product'>" + product[i].quantity;
 	}
-
-	/*
-	document.getElementById("product0").innerHTML = "<p>" + codes[0] + " - " + products[0] + "</p><p class='product-value'> Custo: R$ " + prices[0] + "</p><p class='total-product' id='total-product'>" + quantities[0];
-	document.getElementById("product1").innerHTML = "<p>" + codes[1] + " - " + products[1] + "</p><p class='product-value'> Custo: R$ " + prices[1] + "</p><p class='total-product' id='total-product'>" + quantities[1];
-	document.getElementById("product2").innerHTML = "<p>" + codes[2] + " - " + products[2] + "</p><p class='product-value'> Custo: R$ " + prices[2] + "</p><p class='total-product' id='total-product'>" + quantities[2];
-	document.getElementById("product3").innerHTML = "<p>" + codes[3] + " - " + products[3] + "</p><p class='product-value'> Custo: R$ " + prices[3] + "</p><p class='total-product' id='total-product'>" + quantities[3];*/
 }
 
 /*Escreve o valor dentro da carteira*/
@@ -421,6 +414,7 @@ function WriteAll(){
 function WriteLog(string){
 	document.getElementById("log").innerHTML = document.getElementById("log").innerHTML.concat(string + "<br \>");
 }
+
 function ClearLog(){
 	//alert("Troco: " + machineMoney.c50 + "-50 / " + machineMoney.c1 + "-1 / " + machineMoney.b2 + "-2 / " + machineMoney.b5 + "-5");
 	document.getElementById("log").innerHTML = "";
