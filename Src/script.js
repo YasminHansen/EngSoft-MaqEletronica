@@ -302,7 +302,7 @@ function ConfirmMoney(){
 				if(result == 1){
 					for(var i=0; i < product.length; i++){
 						if(product[i].code == productCode){							
-							WriteLog("Comprou " + product[i].name + " por R$ " + product[i].price + " / O saldo total era de R$ " + balance + " / Devolveu troco de R$ " + (balance-prices[i]));
+							WriteLog("Comprou " + product[i].name + " por R$ " + product[i].price + " / O saldo total era de R$ " + balance + " / Devolveu troco de R$ " + (balance-product[i].price));
 							
 							walletMoney += (balance-product[i].price);
 							
