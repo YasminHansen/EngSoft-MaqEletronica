@@ -28,7 +28,10 @@ body{
     justify-content: end;
 }
 /*-------------MODAL AREA RESTRITA ---------------*/
-
+.modal-restrict-area,
+.modal-telephone-area{
+    z-index: 99999 !important;
+}
 /*-----MACHINE TITLE------*/
 .machine-title-box{
     position: absolute;
@@ -166,7 +169,7 @@ body{
     margin-bottom: 0;
 }
 .machine-content .machine-options .keyboard-buttons{
-    margin: 15px 0 15px auto;
+    margin: 10px auto auto auto;
     background-color: #88a972;
     width: max-content;
     padding: 15px;
@@ -194,7 +197,8 @@ body{
 }
 .machine-content .machine-options .keyboard-payment .total-balance{
     background-color: #fff;
-    padding: 5px 25px;
+    padding: 5px 0;
+    width: 100%;
     border-radius: 5px;
 }
 .machine-content .machine-options .keyboard-payment .keyboard-payment-options {
