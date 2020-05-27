@@ -147,12 +147,13 @@
 							<p>Vendedor</p>
 							<i class="fas fa-user"></i>
 						</button>
-						<button class="modal-supplier" id="modal-supplier">
+						<button class="modal-supplier" id="modal-supplier" onclick="goToSupplierLogin()">
 							<p>Abastecedor</p>
 							<i class="fas fa-user"></i>
 						</dbuttoniv>
 					</div>
 
+					<!-- VENDOR -->
 					<div class="vendor-login" id="vendor-login">
 						<div class="title-vendor-login">
 							<h3><i class="fas fa-user"></i> Vendedor</h3>
@@ -214,6 +215,76 @@
 							</br>
 							<i class="fas fa-money-bill-alt"></i> R$5.00
 							<input>
+							<button>Confirmar</button>
+						</div>
+					</div>
+
+					<!-- SUPPLIER -->
+					<div class="supplier-login" id="supplier-login">
+						<div class="title-vendor-login">
+							<h3><i class="fas fa-user"></i> Abastecedor</h3>
+						</div>
+						<div class="info-supplier-login">
+							<input placeholder="Código de acesso" class="form-control">
+							<input placeholder="Confirmar código de acesso" class="form-control" >
+							<button onclick="goToSupplierOptions()">Entrar</button>
+						</div>
+					</div>
+
+					<div class="supplier-options" id="supplier-options">
+						<div class="title-vendor-login">
+							<h3><i class="fas fa-user"></i> Abastecedor</h3>
+						</div>
+						<div class="">
+							<button onclick="goToSupplierInsert()">Inserir</button>
+							<button onclick="goToSupplierEdit()">Editar</button>
+							<button onclick="goToSupplierRemove()">Remover</button>
+						</div>
+					</div>
+
+					<div class="supplier-insert" id="supplier-insert">
+						<div class="title-vendor-login">
+							<h3><i class="fas fa-user"></i> Abastecedor</h3>
+						</div>
+						<div class="">
+							<p>Adicionar produto</p>
+							<label>Código: </label>
+							<input>
+							<label>Nome: </label>
+							<input>
+							<label>Preço:</label>
+							<input>
+							<label>Quantidade:</label>
+							<input>
+							<button>Confirmar</button>
+						</div>
+					</div>
+
+					<div class="supplier-edit" id="supplier-edit">
+						<div class="title-vendor-login">
+							<h3><i class="fas fa-user"></i> Abastecedor</h3>
+						</div>
+						<div class="">
+							<p>Editar produto</p>
+							<label>Código: </label>
+							<input>
+							<label>Nome: </label>
+							<input>
+							<label>Preço:</label>
+							<input>
+							<label>Quantidade:</label>
+							<input>
+							<button>Confirmar</button>
+						</div>
+					</div>
+
+					<div class="supplier-remove" id="supplier-remove">
+						<div class="title-vendor-login">
+							<h3><i class="fas fa-user"></i> Abastecedor</h3>
+						</div>
+						<div class="">
+							<p>Remover produto</p>
+							<label>Código: </label>
 							<button>Confirmar</button>
 						</div>
 					</div>

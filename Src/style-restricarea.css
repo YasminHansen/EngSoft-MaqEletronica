@@ -88,3 +88,22 @@
 .modal-restrict-area .vendor-add-value{
     display: none;
 }
+
+/*-----SUPPLIER-------*/
+/*----VENDOR LOGIN----*/
+.modal-restrict-area .supplier-login,
+.modal-restrict-area .supplier-options,
+.modal-restrict-area .supplier-insert,
+.modal-restrict-area .supplier-edit,
+.modal-restrict-area .supplier-remove{
+    display: none;
+}
+/* .modal-restrict-area .supplier-options{
+    display: none;
+}
+.modal-restrict-area .supplier-insert{
+    display: none;
+}
+.modal-restrict-area .supplier-edit{
+    display: none;
+} */
