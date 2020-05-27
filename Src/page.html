@@ -9,12 +9,20 @@
 		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 		<script src='main.js'></script>
+	
 	</head>
 	<body>
-		<div class="container-fluid">
+		<div class="container">
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-restrict-area">
+				<i class="fas fa-lock"></i>
+			</button>
+
 			<div class="machine-content row">
-				<div class="machine-display col-8">
+				<div class="machine-title-box">
 					<h1 class="machine-title">Máquina de vendas</h1>
+				</div>
+				<div class="machine-display col-9">
+					
 					<div class="machine-products">
 						<div class="product" id="product0" onClick="totalProduct()"></div>
 						<div class="product" id="product1" onClick="totalProduct()"></div>
@@ -33,7 +41,7 @@
 						<div class="product"><p >Teste</p></div>
 					</div>
 				</div>
-				<div class="machine-options col-4">
+				<div class="machine-options col-3">
 					<div class="keyboard-product">
 						<div class="keyboard-info">
 							<p id="input"></p>
@@ -76,20 +84,50 @@
 						Confirmar compra</button>	
 					</div>
 				</div>
-			
-				<div class="wallet">
-					<div class="wallet-intern">
-						<p><i class="fas fa-money-bill-alt"></i></p>
-						<p id="wallet"></p>
-					</div>
-				</div>
-
-				<h3>Histórico</h3>
-				<p id="log"></p>
-				<button type="button" onclick="ClearLog()">Limpar</button>
+				<i class="fas fa-dollar-sign"></i>
 			</div>
 		</div>
+		<div class="wallet">
+			<div class="wallet-intern">
+				<p><i class="fas fa-money-bill-alt"></i></p>
+				<p id="wallet"></p>
+			</div>
+		</div>
+
+		<h3>Histórico</h3>
+		<p id="log"></p>
+		<button type="button" onclick="ClearLog()">Limpar</button>
 		<script src="script.js"></script>
 		<script>WriteAll();</script>
+		  
+
+
+
+		 <div class="modal fade modal-restrict-area" id="modal-restrict-area" tabindex="-1" role="dialog" aria-labelledby="restrictarea" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <h5 class="modal-title" id="exampleModalLabel">Área Restrita</h5>
+				  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				  </button>
+				</div>
+				<div class="modal-body">
+				  ...
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				  <button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+
+
+
+
+		  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 	</body>
 </html> 

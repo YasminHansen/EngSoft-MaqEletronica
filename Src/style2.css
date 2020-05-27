@@ -7,27 +7,49 @@ snowwhite: #FFFCFF;
 orange: #FA7E61
 lightorange: #FEE1C7
 paradisepink: #F44174
+
+========================
+
+light-orange: #f86f69
+orange: #db625d
 */
 
 body{
-    background: #FFFCFF !important;
+    background: #f8efea !important;
     padding: 0 15px;
 }
 .container .machine-title{
     font-family: 'Poppins', sans-serif;
 }
 
+/*-------------MODAL AREA RESTRITA ---------------*/
+.modal-restrict-area{
+    z-index: 99999 !important;
+}
 /*-----MACHINE TITLE------*/
+.machine-title-box{
+    position: absolute;
+    top: -60px;
+    text-align: center;
+    width: 100%;
+    z-index: 9999;
+}
 .machine-title{
     color: #000;
     font-weight: bold;
-    margin: 30px 0;
     animation: animate 2s linear infinite;
+    width: max-content;
+    text-align: center;
+    margin: auto;
+    background-color: #87aa72;
+    padding: 35px;
+    border-radius: 15px;
+    border: 4px solid white;
 }
 @keyframes animate{
     0%, 100%{
         color: #fff;
-        filter: blur(1px);
+        /*filter: blur(1px);*/
         text-shadow: 0 0 10px #de95ab,
                      0 0 20px #de95ab,
                      0 0 30px #de95ab,
@@ -37,7 +59,7 @@ body{
 
     50%{
         color: #fff;
-        filter: blur(1px);
+        /*filter: blur(1px);*/
         text-shadow: 0 0 10px #F44174,
                      0 0 20px #F44174,
                      0 0 30px #F44174,
@@ -46,24 +68,35 @@ body{
     }
 }
 
+/*-------MACHINE --------*/
+.machine-content{
+    position: relative;
+    background-color: #f86f69;
+    margin-top: 80px;
+    border: 2px solid;
+    border-color: #f98883 #994440  #994440  #f98883;
+
+    text-align: center;
+
+    border-radius: 5px;
+}
 
 /*------MACHINE PRODUCTS---------*/
 .machine-display{
-    margin-top: 50px;
-    background-color: #9dd3d2;
-    border: 2px solid;
-    text-align: center;
-    border-color:  #5b9e99 #3d6a71 #3d6a71 #5b9e99 ;
-    border-radius: 10px;
+
 }
+
+
 .machine-products{
     display: flex;
     flex-wrap: wrap;
     background-color: #FFFCFF;
     border: 2px solid;
-    border-color: #5b9e99 #3d6a71 #3d6a71 #5b9e99 ;
-    border-radius: 15px;
-    margin: 25px 10px;
+    border-color: #ffb2af;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin: 50px 10px;
+    padding: 40px 0 25px 0;
 }
 .machine-products .product{
     border: 1px solid;
@@ -72,13 +105,33 @@ body{
     display: flex;
     flex-direction: column;
     text-align: left;
-}
-.machine-products .product #total-product{
-    display: none;
-}
-.machine-products .product #total-product:hover{
-    display: block;
+    position: relative;
+    text-align: center;
 }
 .machine-products .product:hover{
     border: 1px solid #5b9e99;
 }
+
+.machine-products .product .total-product{
+    position: absolute;
+    border-radius: 50px;
+    border: 1px solid red;
+    padding: 5px 13px;
+    right: 0;
+}
+.machine-products .product .product-value{
+    width: max-content;
+    border: 1px solid black;
+    margin: auto;
+    border-bottom: none;
+    padding: 0 10px;
+}
+
+/*------MACHINE OPTIONS ---------*/
+.machine-content .machine-options{
+    margin-top: 50px;
+    background-color: #fff;
+    border-top-right-radius: 15px;
+}
+
+

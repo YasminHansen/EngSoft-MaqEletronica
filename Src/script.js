@@ -383,10 +383,10 @@ function WriteInput(){
 
 /*Escreve os produtos e suas informações na máquina*/
 function WriteProducts(){
-	document.getElementById("product0").innerHTML = "<p>" + codes[0] + " - " + products[0] + "</p><p> Custo: R$ " + prices[0] + "</p><p id='total-product'>" + quantities[0] + " restantes</p>";
-	document.getElementById("product1").innerHTML = "<p>" + codes[1] + " - " + products[1] + "</p><p> Custo: R$ " + prices[1] + "</p><p id='total-product'>" + quantities[1] + " restantes</p>";
-	document.getElementById("product2").innerHTML = "<p>" + codes[2] + " - " + products[2] + "</p><p> Custo: R$ " + prices[2] + "</p><p id='total-product'>" + quantities[2] + " restantes</p>";
-	document.getElementById("product3").innerHTML = "<p>" + codes[3] + " - " + products[3] + "</p><p> Custo: R$ " + prices[3] + "</p><p id='total-product'>" + quantities[3] + " restantes</p>";
+	document.getElementById("product0").innerHTML = "<p>" + codes[0] + " - " + products[0] + "</p><p class='product-value'> Custo: R$ " + prices[0] + "</p><p class='total-product' id='total-product'>" + quantities[0];
+	document.getElementById("product1").innerHTML = "<p>" + codes[1] + " - " + products[1] + "</p><p class='product-value'> Custo: R$ " + prices[1] + "</p><p class='total-product' id='total-product'>" + quantities[1];
+	document.getElementById("product2").innerHTML = "<p>" + codes[2] + " - " + products[2] + "</p><p class='product-value'> Custo: R$ " + prices[2] + "</p><p class='total-product' id='total-product'>" + quantities[2];
+	document.getElementById("product3").innerHTML = "<p>" + codes[3] + " - " + products[3] + "</p><p class='product-value'> Custo: R$ " + prices[3] + "</p><p class='total-product' id='total-product'>" + quantities[3];
 }
 
 /*Escreve o valor dentro da carteira*/
