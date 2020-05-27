@@ -1,3 +1,90 @@
-.modal-restrict-area{
-    
+.external-options{
+    display: flex;
+    justify-content: end;
+
+}
+.external-options .modal-class{
+    width: max-content;
+    margin: 10px 5px;
+}
+/*--HOME MODAL RESTRICT AREA--*/
+.modal-restrict-area .area-restric-home{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.modal-restrict-area .area-restric-home button{
+    border: 1px solid #f86f69;
+    background-color: #f86f69;
+    color: white;
+    padding: 10px;
+    width: 115px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.modal-restrict-area .area-restric-home button:hover{
+    background-color: #e8655f;
+}
+.modal-restrict-area .area-restric-home button i{
+    font-size: 35px;
+}
+/*----VENDOR RESTRICT AREA-----*/
+.modal-restrict-area .title-vendor-login{
+    display: flex;
+    text-align: center;
+    color: #e8655f;
+    margin-bottom: 10px;
+}
+.modal-restrict-area .title-vendor-login h3{
+    margin: auto;
+}
+/*----VENDOR LOGIN----*/
+.modal-restrict-area .vendor-login{
+    display: none;
+    text-align: center;
+}
+
+.modal-restrict-area .vendor-login .info-vendor-login{
+    display: flex;
+    flex-direction: column;
+}
+.modal-restrict-area .vendor-login .info-vendor-login input{
+    width: 250px;
+    margin: 5px auto;
+}
+.modal-restrict-area .vendor-login .info-vendor-login button{
+    width: max-content;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+/*-----VENDOR OPTIONS-----*/
+.modal-restrict-area .vendor-options{
+    display: none;
+}
+.modal-restrict-area .vendor-options .options{
+    justify-content: space-around;
+    text-align: center;
+    display: flex;
+}
+.modal-restrict-area .vendor-options p{
+    margin-bottom: 0;
+}
+.modal-restrict-area .vendor-options button{
+    border: 1px solid #f86f69;
+    background-color: #f86f69;
+    color: white;
+    padding: 10px;
+    width: 115px;
+    height: 99px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 35px;
+}
+.modal-restrict-area .vendor-options button:hover{
+    background-color: #e8655f;
+}
+/*---VENDOR REMOVE-----*/
+.modal-restrict-area .vendor-remove-value,
+.modal-restrict-area .vendor-add-value{
+    display: none;
 }
