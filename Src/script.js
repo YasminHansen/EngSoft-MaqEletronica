@@ -5,6 +5,10 @@ var productCode = "--";
 var productName = "--";
 var productPrice = "--";
 
+//passa pra products as infos do data.js
+var product = data;
+console.log(product);
+
 function BillsAndCoins(c50, c1, b2, b5){
 	this.c50 = c50;
 	this.c1  = c1;
@@ -67,6 +71,7 @@ function RemoveCodeByIndex(index){
 	codes[index] = newValue;
 	return oldValue;
 }
+
 function RemoveProductByIndex(index){
 	
 	var oldValue = products[index];
@@ -82,6 +87,7 @@ function RemoveProductByIndex(index){
 	products[index] = newValue;
 	return oldValue;
 }
+
 function RemovePriceByIndex(index){
 	
 	var oldValue = prices[index];
@@ -97,6 +103,7 @@ function RemovePriceByIndex(index){
 	prices[index] = newValue;
 	return oldValue;
 }
+
 function RemoveQuantityByIndex(index){
 	
 	var oldValue = quantities[index];
@@ -116,10 +123,10 @@ function RemoveQuantityByIndex(index){
 function FindProductIndex(code){
 	var index;
 	
-	for(var i=0; i < codes.length; i++){
-		if(codes[i] == code){
-			index = i;
-			return i;
+	for(var i=0; i < product.length; i++){
+		if(product[i].code == code){
+			index = product[i].code;
+			return index;
 		}
 	}
 	return "X";
@@ -181,8 +188,8 @@ function PressedNumber(num){
 		tempInput = "0" + num;
 		for(var i=0; i < codes.length; i++){
 			if(codes[i] == tempInput){
-				productName = products[i];
-				productPrice = prices[i];
+				productName = product[i].name;
+				productPrice = product[i].price;
 			}
 		}
 	}
@@ -217,9 +224,9 @@ function Confirm(){
 		
 		input = productCode;
 		
-		for(var i=0; i < codes.length; i++){
-			if(codes[i] == productCode){
-				if(quantities[i] > 0){
+		for(var i=0; i < product.length; i++){
+			if(product[i].code == productCode){
+				if(product[i].quantity > 0){
 					alert("Produto selecionado, insira o dinheiro!");
 				}
 				else{
@@ -293,12 +300,12 @@ function ConfirmMoney(){
 				result = CheckChange(balance - productPrice);
 				
 				if(result == 1){
-					for(var i=0; i < codes.length; i++){
-						if(codes[i] == productCode){
+					for(var i=0; i < product.length; i++){
+						if(product[i].code == productCode){
 				
-							WriteLog("Comprou " + products[i] + " por R$ " + prices[i] + " / O saldo total era de R$ " + balance + " / Devolveu troco de R$ " + (balance-prices[i]));
+							WriteLog("Comprou " + product[i].name + " por R$ " + product[i].price + " / O saldo total era de R$ " + balance + " / Devolveu troco de R$ " + (balance-prices[i]));
 							
-							walletMoney += (balance-prices[i]);
+							walletMoney += (balance-product[i].price);
 							
 							machineMoney.c50 += balanceMoney.c50;
 							machineMoney.c1 += balanceMoney.c1;
@@ -306,7 +313,7 @@ function ConfirmMoney(){
 							machineMoney.b5 += balanceMoney.b5;
 							
 							balance = 0;
-							quantities[i]--;
+							product[i].quantity--;
 							
 							AddMoney(0);
 							Cancel();
@@ -383,10 +390,18 @@ function WriteInput(){
 
 /*Escreve os produtos e suas informações na máquina*/
 function WriteProducts(){
+
+	for(var i = 0; i < product.length; i++){
+		document.getElementById(product[i].code).innerHTML = "<p>" + product[i].code + " - " 
+		+ product[i].name + "</p><p class='product-value'> Custo: R$ " + product[i].price 
+		+ "</p><p class='total-product' id='total-product'>" + product[i].quantity;
+	}
+
+	/*
 	document.getElementById("product0").innerHTML = "<p>" + codes[0] + " - " + products[0] + "</p><p class='product-value'> Custo: R$ " + prices[0] + "</p><p class='total-product' id='total-product'>" + quantities[0];
 	document.getElementById("product1").innerHTML = "<p>" + codes[1] + " - " + products[1] + "</p><p class='product-value'> Custo: R$ " + prices[1] + "</p><p class='total-product' id='total-product'>" + quantities[1];
 	document.getElementById("product2").innerHTML = "<p>" + codes[2] + " - " + products[2] + "</p><p class='product-value'> Custo: R$ " + prices[2] + "</p><p class='total-product' id='total-product'>" + quantities[2];
-	document.getElementById("product3").innerHTML = "<p>" + codes[3] + " - " + products[3] + "</p><p class='product-value'> Custo: R$ " + prices[3] + "</p><p class='total-product' id='total-product'>" + quantities[3];
+	document.getElementById("product3").innerHTML = "<p>" + codes[3] + " - " + products[3] + "</p><p class='product-value'> Custo: R$ " + prices[3] + "</p><p class='total-product' id='total-product'>" + quantities[3];*/
 }
 
 /*Escreve o valor dentro da carteira*/
@@ -417,3 +432,4 @@ function ClearLog(){
 // 	else
 // 		document.getElementById("total-product").style.display = "block";
 // }
+
