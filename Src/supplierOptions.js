@@ -37,9 +37,13 @@ function NewProduct(){
 		
 		if(newName == "" || newPrice == "" || newQuantity == "")
 			alert("Por favor preencha todos os itens!")
-		else{		
+
+		else if(newQuantity > 15 || newPrice > 15)
+			alert("Valor de produto ou quantidade excedidos. \n Valor máximo de produto: R$15,00 \n Quantidade máxima: 15")
+		
+		else{
 			product[index].name = newName;
-			product[index].price = newPrice;
+			product[index].price = newPrice.toFixed(2);
 			product[index].quantity = newQuantity;
 			
 			document.getElementById("newCode").value = "";
@@ -88,7 +92,7 @@ function AlterProduct(){
 		alert("Produto alterado com sucesso!");
 	}
 	else if(result == 0){
-		alert("Esse espaço está vazio. Você pode adicionar este produto utilizando a tela anterior.")
+		alert("Esse espaço está vazio. Você pode adicionar este produto utilizando a opção 'Adicionar'.")
 	}
 	else{
 		alert("Código inválido!");
