@@ -20,7 +20,7 @@ function ConfirmCart(){
 	
 	if(cartPrice != 0){
 		WriteLog("- Comprou itens do carrinho pelo valor de R$ " + cartPrice);		
-	
+		document.getElementById("remove-products").classList.add('user-product');
 		machineMoney.mobile += cartPrice;
 	
 		cartPrice = 0;
