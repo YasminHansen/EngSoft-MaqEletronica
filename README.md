@@ -15,7 +15,7 @@ A máquina tem dois usuários, o vendedor, que pode adicionar ou retirar dinheir
 |                |LOGIN             |SENHA       |
 |----------------|-------------------------------|-----------------------------|
 |Vendedor	     | admin            | 123        |
-|Abastecedor     | admin            |"123        |
+|Abastecedor     | admin            | 123        |
 
 ## Rodando o projeto
 Basta abrir a página "page.html"
