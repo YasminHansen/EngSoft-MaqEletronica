@@ -1,7 +1,7 @@
 var walletMoney = 500;
 var balance = 0;
 var input = "--";
-var productCode = "--";
+var productCode = "";
 var productName = "--";
 var productPrice = "--";
 

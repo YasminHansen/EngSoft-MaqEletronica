@@ -26,9 +26,9 @@ function WriteWallet(){
 
 function WriteMobileProducts(){
 	for(var i = 0; i < product.length; i++){
-		document.getElementById(product[i].codeMobile).innerHTML = "<p>" + product[i].code + " - " 
-		+ product[i].name + "</p><p class='product-value'> Custo: R$ " + product[i].price 
-		+ "</p><p class='total-product' id='total-product'>" + product[i].quantity;
+		document.getElementById(product[i].codeMobile).innerHTML = "<p class='product-name'>" 
+		+ product[i].name + "</p>" + "<img src='../assets/2915889.png' alt='icon' class='product-image'/>" + "<p class='product-value'> <i class='fas fa-dollar-sign'></i> " + product[i].price 
+		+ "</p><p class='total-product' id='total-product'>" + product[i].quantity + "<p class='product-code'>" + product[i].code + "</p>";
 	}
 }
 
