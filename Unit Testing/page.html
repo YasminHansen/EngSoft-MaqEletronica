@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+		<title>Page Title</title>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<link rel='stylesheet' href='style2.css'>
+		<link rel='stylesheet' href='style-restricarea.css'>
+		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		<script type="text/javascript" src="data.js"></script>
+		<script src='restrict-area.js'></script><script src='log.js'></script><script src='writeInterface.js'></script>
+		<script src='insertMoney.js'></script><script src='productChoice.js'></script><script src='vendorOptions.js'></script>
+		<script src='supplierOptions.js'></script><script src='mobileBuy.js'></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="external-options">
+				<div class="modal-class" data-toggle="tooltip" data-toggle="tooltip" data-placement="bottom" title="Acesso mobile">
+					<button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-telephone-area">
+						<i class="fab fa-bluetooth"></i>
+					</button>
+				</div>
+
+				<div class="modal-class" data-toggle="tooltip" data-toggle="tooltip" data-placement="bottom" title="Área restrita">
+					<button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-restrict-area">
+						<i class="fas fa-lock"></i>
+					</button>
+				</div>
+			</div>
+
+			<div class="machine-content row">
+				<div class="machine-title-box">
+					<h1 class="machine-title">Máquina de vendas</h1>
+				</div>
+				<div class="machine-display col-9">
+				
+					<div class="machine-products">
+						<div class="product" id="1"></div>
+						<div class="product" id="2"></div>
+						<div class="product" id="3"></div>
+						<div class="product" id="4"></div>
+						<div class="product" id="5"></div>
+						<div class="product" id="6"></div>
+						<div class="product" id="7"></div>
+						<div class="product" id="8"></div>
+						<div class="product" id="9"></div>
+					</div>
+				</div>
+				<div class="machine-options col-3">
+					<div class="keyboard-product">
+						<div class="keyboard-info">
+							<div class="keyboard-product-info">
+								<div class="input col-5">
+									<p id="input"></p>	
+								</div>							
+								<div class="info col-7">
+									<p id="productName"></p>
+									<p id="productPrice"></p>
+								</div>
+							</div>
+							<div class="keyboard-buttons">
+								<button type="button" onclick="PressedNumber(1)">1</button>
+								<button type="button" onclick="PressedNumber(2)">2</button>
+								<button type="button" onclick="PressedNumber(3)">3</button>
+								<br>
+								<button type="button" onclick="PressedNumber(4)">4</button>
+								<button type="button" onclick="PressedNumber(5)">5</button>
+								<button type="button" onclick="PressedNumber(6)">6</button>
+								<br>
+								<button type="button" onclick="PressedNumber(7)">7</button>
+								<button type="button" onclick="PressedNumber(8)">8</button>
+								<button type="button" onclick="PressedNumber(9)">9</button>
+								<br>
+								<button class="cancel" type="button" onclick="Cancel(1)">X</button>
+								<button type="button" onclick="PressedNumber(0)">0</button>
+								<button class="confirm" type="button" onclick="Confirm(1)">✓</button>
+							</div>
+						</div>
+					</div>
+					<div class="keyboard-payment row">
+						<div class="keyboard-payment-options col-4">
+							<button type="button" onclick="ConfirmMoney()" data-toggle="tooltip" data-placement="bottom" title="Confirmar">	
+								<i class="far fa-caret-square-up"></i>
+							</button>
+							<button type="button" onclick="AddMoney(0)" data-toggle="tooltip" data-placement="bottom" title="Receber dinheiro de volta">	
+								<i class="fas fa-undo-alt"></i>
+							</button>	
+						</div>
+						<div class="keyboard-payment-values col-8">
+							<label id="balance" class="total-balance"></label>
+							<button type="button" onclick="AddMoney(0.5)">	
+								<i class="fas fa-dollar-sign"></i> 0.50</button>	
+							<button type="button" onclick="AddMoney(1)">	
+								<i class="fas fa-dollar-sign"></i> 1.00</button>
+							<button type="button" onclick="AddMoney(2)">	
+								<i class="fas fa-dollar-sign"></i> 2.00</button>
+							<button type="button" onclick="AddMoney(5)">	
+								<i class="fas fa-dollar-sign"></i> 5.00</button>	
+						</div>
+					</div>
+				</div>
+				<div class="take-products col-12">
+					<div class="row">
+						<div class="remove-products col-9" data-toggle="tooltip" data-placement="bottom" title="Retirar produto">
+							<i class="fas fa-hand-holding"></i>
+						</div>
+						<div class="money col-3"  data-toggle="tooltip" data-placement="bottom" title="Troco">
+							<i class="fas fa-coins"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="machine-bottom">
+				<div class="machine-foot"></div>
+				<div class="machine-foot"></div>
+			</div>
+		</div>
+		<div class="wallet">
+			<button class="wallet-intern" onclick="showHistoric()">
+				<p><i class="fas fa-book-open"></i></p>
+				<p id="wallet"></p>
+			</button>
+		</div>
+		<div class="historic active" id="historic">
+			<h3>Histórico</h3>
+			<p id="log"></p>
+			<button type="button" onclick="ClearLog()">Limpar</button>
+		</div>
+		  
+
+
+		<!-- RESTRICT AREA -->
+		 <div class="modal fade modal-restrict-area" id="modal-restrict-area" tabindex="-1" role="dialog" aria-labelledby="restrictarea" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <h5 class="modal-title" id="exampleModalLabel">Área Restrita</h5>
+				  <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="close-modal" onclick="closeModal()">
+					<span aria-hidden="true">&times;</span>
+				  </button>
+				</div>
+				<div class="modal-body">
+					<div class="area-restric-home" id="area-restrict-home">
+				  		<button class="modal-vendor" id="modal-vendor" onclick="goToVendorLogin()">
+							<p>Vendedor</p>
+							<i class="fas fa-user"></i>
+						</button>
+						<button class="modal-supplier" id="modal-supplier" onclick="goToSupplierLogin()">
+							<p>Abastecedor</p>
+							<i class="fas fa-user"></i>
+						</dbuttoniv>
+					</div>
+
+					<!-- VENDOR -->
+					<div class="vendor-login" id="vendor-login">
+						<div class="title-vendor-login">
+							<h3><i class="fas fa-user"></i> Vendedor</h3>
+						</div>
+						<div class="info-vendor-login">
+							<input placeholder="Login" class="form-control" id="vendorLogin">
+							<input placeholder="Senha" class="form-control" id="vendorPassword" type="password">
+							<button onclick="goToVendorOptions()">Entrar</button>
+						</div>
+					</div>
+
+					<div class="vendor-options" id="vendor-options">
+						<div class="title-vendor-login">
+							<h3><i class="fas fa-user"></i> Vendedor</h3>
+						</div>
+						<div class="options">
+							<div class="vendor-options-remove" data-toggle="tooltip" data-placement="bottom" title="Retirar dinheiro">
+								<p>Retirar</p>
+								<button onclick="goToVendorRemove()"><i class="fas fa-money-bill-alt"></i></button>
+							</div>
+							<div class="vendor-options-add" data-toggle="tooltip" data-placement="bottom" title="Adicionar troco">
+								<p>Adicionar</p>
+								<button onclick="goToVendorAdd()"><i class="fas fa-coins"></i></button>
+							</div>
+						</div>
+					</div>
+
+					<div class="vendor-remove-value" id="vendor-remove">
+						<div class="title-vendor-login">
+							<h3><i class="fas fa-user"></i> Vendedor</h3>
+						</div>
+						<p>Valores disponíveis: </p>
+						<div class="value-show">		
+							<div>
+								<i class="fas fa-coins"></i> R$0.50 - 
+								<p id="showC50"></p>
+							</div>
+							<div>
+								<i class="fas fa-coins"></i> R$1.00 - 
+								<p id="showC1"></p>
+							</div>
+							<div>
+								<i class="fas fa-money-bill-alt"></i> R$2.00 - 
+								<p id="showB2"></p>
+							</div>
+							<div>
+								<i class="fas fa-money-bill-alt"></i> R$5.00 - 
+								<p id="showB5"></p>
+							</div>
+							<div>
+								<i class="fas fa-money-bill-alt"></i> PayBlu - 
+								<p id="showMobile"></p>
+							</div>
+							<div>
+								<i class="fas fa-money-bill-alt"></i> Total - 
+								<p id="showTotal"></p>
+							</div>
+						</div>
+						<div class="value-remove">
+							<p>*Ao aceitar retirar o dinheiro da máquina, um valor mínimo continuará depositado.</p>
+							<button onClick="WithdrawMachineMoney()">Retirar</button>
+						</div>
+					</div>
+
+					<div class="vendor-add-value" id="vendor-add">
+						<div class="title-vendor-login">
+							<h3><i class="fas fa-user"></i> Vendedor</h3>
+						</div>
+						<div class="add-value">
+							<p>Adicionar dinheiro</p>
+							<div>
+								<i class="fas fa-coins"></i> <p>R$0.50</p>
+								<input class="form-control" id="inputC50">
+							</div>
+							<div>
+								<i class="fas fa-coins"></i> <p>R$1.00</p>
+								<input class="form-control" id="inputC1">
+							</div>
+							<div>
+								<i class="fas fa-money-bill-alt"></i> <p>R$2.00</p>
+								<input class="form-control" id="inputB2">
+							</div>
+							<div>
+								<i class="fas fa-money-bill-alt"></i> <p>R$5.00</p>
+								<input class="form-control" id="inputB5">
+							</div>
+						</div>
+						<button onClick="AddMachineMoney()">Confirmar</button>
+					</div>
+
+					<!-- SUPPLIER -->
+					<div class="supplier-login" id="supplier-login">
+						<div class="title-vendor-login">
+							<h3><i class="fas fa-user"></i> Abastecedor</h3>
+						</div>
+						<div class="info-supplier-login">
+							<input placeholder="Login" class="form-control" id="supplierLogin">
+							<input placeholder="Senha" class="form-control" id="supplierPassword" type="password">
+							<button onclick="goToSupplierOptions()">Entrar</button>
+						</div>
+					</div>
+
+					<div class="supplier-options" id="supplier-options">
+						<div class="title-vendor-login">
+							<h3><i class="fas fa-user"></i> Abastecedor</h3>
+						</div>
+						<div class="options">
+							<div>
+								<p>Inserir</p>
+								<button onclick="goToSupplierInsert()"><i class="fas fa-sign-in-alt"></i></button>
+							</div>
+							<div>
+								<p>Editar</p>
+								<button onclick="goToSupplierEdit()"><i class="fas fa-edit"></i></button>
+							</div>
+							<div>
+								<p>Remover</p>
+								<button onclick="goToSupplierRemove()"><i class="fas fa-sign-out-alt"></i></button>
+							</div>
+						</div>
+					</div>
+
+					<div class="supplier-insert" id="supplier-insert">
+						<div class="title-vendor-login">
+							<h3><i class="fas fa-user"></i> Abastecedor</h3>
+						</div>
+						<p>Adicionar produto</p>
+						<div class="supplier-insert-info">
+							<div>
+								<label class="col-5">Código: </label>
+								<input class="col-7 form-control" id="newCode">
+							</div>
+							<div>
+								<label class="col-5">Nome: </label>
+								<input class="col-7 form-control" id="newName">
+							</div>
+							<div>
+								<label class="col-5">Preço:</label>
+								<input class="col-7 form-control" id="newPrice">
+							</div>
+							<div>
+								<label class="col-5">Quantidade:</label>
+								<input class="col-7 form-control" id="newQuantity">
+							</div>
+							<button onClick="NewProduct()">Confirmar</button>
+						</div>
+					</div>
+
+					<div class="supplier-edit" id="supplier-edit">
+						<div class="title-vendor-login">
+							<h3><i class="fas fa-user"></i> Abastecedor</h3>
+						</div>
+						<p>Editar produto</p>
+						<div class="supplier-edit-info">
+							<div>
+								<label class="col-5">Código: </label>
+								<input class="col-7 form-control" id="alterCode">
+							</div>
+							<div>
+								<label class="col-5">Nome: </label>
+								<input class="col-7 form-control" id="alterName">
+							</div>
+							<div>
+								<label class="col-5">Preço:</label>
+								<input class="col-7 form-control" id="alterPrice">
+							</div>
+							<div>
+								<label class="col-5">Quantidade:</label>
+								<input class="col-7 form-control" id="alterQuantity">
+							</div>
+							<button onClick="AlterProduct()">Confirmar</button>
+						</div>
+					</div>
+
+					<div class="supplier-remove" id="supplier-remove">
+						<div class="title-vendor-login">
+							<h3><i class="fas fa-user"></i> Abastecedor</h3>
+						</div>
+						<p>Remover produto</p>
+						<div class="supplier-remove-info">
+							<div>
+								<label class="col-5">Código:</label>
+								<input class="col-7 form-control" id="removeCode">
+							</div>
+							<button onClick="RemoveProduct()">Confirmar</button>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="closeModal()">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+
+
+		<!-- TELEPHONE -->
+		  <div class="modal fade modal-telephone-area" id="modal-telephone-area" tabindex="-1" role="dialog" aria-labelledby="telephonearea" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <h5 class="modal-title" id="exampleModalLabel">Área Virtual</h5>
+				  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				  </button>
+				</div>
+				<div class="modal-body">
+					<div class="machine-mobile-products" id="machine-mobile-products">
+						<div>
+							<div class="product-list">
+								<button class="product" id="mobile-1" onClick="AddToCart(1)"></button>
+								<button class="product" id="mobile-2" onClick="AddToCart(2)"></button>
+								<button class="product" id="mobile-3" onClick="AddToCart(3)"></button>
+							</div>
+							<div class="product-list">
+								<button class="product" id="mobile-4" onClick="AddToCart(4)"></button>
+								<button class="product" id="mobile-5" onClick="AddToCart(5)"></button>
+								<button class="product" id="mobile-6" onClick="AddToCart(6)"></button>
+							</div>
+							<div class="product-list">
+								<button class="product" id="mobile-7" onClick="AddToCart(7)"></button>
+								<button class="product" id="mobile-8" onClick="AddToCart(8)"></button>
+								<button class="product" id="mobile-9" onClick="AddToCart(9)"></button>
+							</div>
+						</div>
+						<div class="machine-mobile-bag">
+							<p>Carrinho: </p><p id="cartValue"></p>
+							<button onclick="goToTelephonePayment(); ConfirmCart()" class="confirm" data-toggle="tooltip" data-toggle="tooltip" data-placement="bottom" title="Confirmar pagamento">
+								<i class="fas fa-shopping-cart"></i>
+							</button>
+						</div>
+					</div>
+
+
+					<div class="machine-mobile-payment" id="machine-mobile-payment">
+						<div class="show-value">
+							<p>Produtos selecionados:</p>
+						</div>
+						<div class="machine-mobile-bag">
+							<p>Valor total: --</p>
+							<button class="confirm" data-toggle="tooltip" data-toggle="tooltip" data-placement="bottom" title="Confirmar pagamento">
+								<i class="fas fa-check"></i>
+							</button>
+						</div>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+
+
+		  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+		  <script src="script.js"></script>
+		  <script>WriteAll();</script>
+	</body>
+</html> 

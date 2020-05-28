@@ -1,0 +1,355 @@
+.external-options{
+    display: flex;
+    justify-content: end;
+
+}
+.external-options .modal-class{
+    width: max-content;
+    margin: 10px 5px;
+}
+/*--HOME MODAL RESTRICT AREA--*/
+.modal-restrict-area .area-restric-home{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.modal-restrict-area .area-restric-home button{
+    border: 1px solid #f86f69;
+    background-color: #f86f69;
+    color: white;
+    padding: 10px;
+    width: 115px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.modal-restrict-area .area-restric-home button:hover{
+    background-color: #e8655f;
+}
+.modal-restrict-area .area-restric-home button i{
+    font-size: 35px;
+}
+/*----VENDOR RESTRICT AREA-----*/
+.modal-restrict-area .title-vendor-login{
+    display: flex;
+    text-align: center;
+    color: #e8655f;
+    margin-bottom: 10px;
+}
+.modal-restrict-area .title-vendor-login h3{
+    margin: auto;
+}
+/*----VENDOR LOGIN----*/
+.modal-restrict-area .vendor-login{
+    display: none;
+    text-align: center;
+}
+
+.modal-restrict-area .vendor-login .info-vendor-login{
+    display: flex;
+    flex-direction: column;
+}
+.modal-restrict-area .vendor-login .info-vendor-login input{
+    width: 250px;
+    margin: 5px auto;
+}
+.modal-restrict-area .vendor-login .info-vendor-login button{
+    width: max-content;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+/*-----VENDOR OPTIONS-----*/
+.modal-restrict-area .vendor-options{
+    display: none;
+}
+.modal-restrict-area .vendor-options .options{
+    justify-content: space-around;
+    text-align: center;
+    display: flex;
+}
+.modal-restrict-area .vendor-options p{
+    margin-bottom: 0;
+}
+.modal-restrict-area .vendor-options button{
+    border: 1px solid #f86f69;
+    background-color: #f86f69;
+    color: white;
+    padding: 10px;
+    width: 115px;
+    height: 99px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 35px;
+}
+.modal-restrict-area .vendor-options button:hover{
+    background-color: #e8655f;
+}
+/*---VENDOR REMOVE / ADD -----*/
+.modal-restrict-area .vendor-remove-value,
+.modal-restrict-area .vendor-add-value{
+    display: none;
+}
+
+/*---- VENDOR REMOVE ------*/
+.modal-restrict-area .vendor-remove-value {
+    text-align: center;
+}
+.modal-restrict-area .vendor-remove-value .value-show{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+}
+.modal-restrict-area .vendor-remove-value .value-show div{
+    display: flex;
+    margin: auto 0;
+}
+.modal-restrict-area .vendor-remove-value .value-show div i{
+    height: min-content;
+    margin: auto 10px;
+    width: 20px;
+}
+.modal-restrict-area .vendor-remove-value .value-show div p{
+    margin-left: 5px;
+}
+.modal-restrict-area .vendor-remove-value .value-remove p{
+    text-align: left;
+    font-size: 14px;
+    color: #e8655f;
+    margin-top: 15px;
+}
+.modal-restrict-area .vendor-remove-value .value-remove button{
+    border-radius: 10px;
+}
+
+/*---- VENDOR ADD ------*/
+.modal-restrict-area .vendor-add-value{
+    text-align: center;
+}
+.modal-restrict-area .vendor-add-value .add-value{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+}
+.modal-restrict-area .vendor-add-value .add-value div{
+    display: flex;
+    margin: 5px 0;
+    text-align: left;
+}
+.modal-restrict-area .vendor-add-value .add-value div p{
+    height: min-content;
+    margin: auto 10px auto 0;
+}
+.modal-restrict-area .vendor-add-value .add-value div i{
+    height: min-content;
+    margin: auto 10px;
+    width: 20px;
+}
+.modal-restrict-area .vendor-add-value button{
+    margin-top: 20px;
+    border-radius: 10px;
+}
+/*---------------------*/
+/*-------SUPPLIER------*/
+/*---------------------*/
+.modal-restrict-area .supplier-login,
+.modal-restrict-area .supplier-options,
+.modal-restrict-area .supplier-insert,
+.modal-restrict-area .supplier-edit,
+.modal-restrict-area .supplier-remove{
+    display: none;
+}
+/*----VENDOR LOGIN----*/
+.modal-restrict-area .supplier-login{
+    text-align: center;
+}
+.modal-restrict-area .supplier-login .info-supplier-login{
+    display: flex;
+    flex-direction: column;
+}
+.modal-restrict-area .supplier-login .info-supplier-login input{
+    width: 250px;
+    margin: 5px auto;
+}
+.modal-restrict-area .supplier-login .info-supplier-login button{
+    width: max-content;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+/*----VENDOR OPTIONS----*/
+.modal-restrict-area .supplier-options .options{
+    display: flex;
+    justify-content: space-around;
+}
+.modal-restrict-area .supplier-options .options div {
+    text-align: center;
+}
+.modal-restrict-area .supplier-options .options div p{
+    margin-bottom: 0;
+}
+.modal-restrict-area .supplier-options .options div button{
+    background-color: #f86f69;
+    color: #fff;
+    border: none;
+    width: 115px;
+    height: 99px;
+    border-radius: 10px;
+    font-size: 35px;
+}
+.modal-restrict-area .supplier-options .options div button:hover{
+    background-color: #e8655f;
+}
+
+/*----VENDOR INSERT / EDIT / REMOVE  ----*/
+.modal-restrict-area .supplier-insert p,
+.modal-restrict-area .supplier-edit p,
+.modal-restrict-area .supplier-remove p{
+    text-align: center;
+}
+.modal-restrict-area .supplier-insert button,
+.modal-restrict-area .supplier-edit button,
+.modal-restrict-area .supplier-remove button{
+    margin: auto;
+}
+.modal-restrict-area .supplier-insert .supplier-insert-info,
+.modal-restrict-area .supplier-edit .supplier-edit-info,
+.modal-restrict-area .supplier-remove .supplier-remove-info{
+    width: 300px;
+    text-align: center;
+    margin: auto;
+}
+.modal-restrict-area .supplier-insert .supplier-insert-info button,
+.modal-restrict-area .supplier-edit .supplier-edit-info button,
+.modal-restrict-area .supplier-remove .supplier-remove-info button{
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.modal-restrict-area .supplier-insert .supplier-insert-info div,
+.modal-restrict-area .supplier-edit .supplier-edit-info div,
+.modal-restrict-area .supplier-remove .supplier-remove-info div{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+}
+.modal-restrict-area .supplier-insert .supplier-insert-info div label,
+.modal-restrict-area .supplier-edit .supplier-edit-info div label,
+.modal-restrict-area .supplier-remove .supplier-remove-info div label{
+    text-align: center;
+}
+
+
+/*---------------------------------*/
+/*------------TELEPHONE------------*/
+.modal-telephone-area .modal-body{
+    background-color: #000;
+    margin: 10px;
+    border-radius: 50px;
+    border-left: 3px solid #606060;
+    border-top: 3px solid #606060;
+    height: 979px;
+}
+.modal-telephone-area .modal-body .machine-mobile-products, 
+.modal-telephone-area .modal-body .machine-mobile-payment{
+    background-color: #fff;
+    margin: 60px 10px;
+}
+
+.modal-telephone-area .modal-body .machine-mobile-products .machine-mobile-bag,
+.modal-telephone-area .modal-body .machine-mobile-payment .machine-mobile-bag{
+    background-color: #8acdf8;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.modal-telephone-area .modal-body .machine-mobile-products .machine-mobile-bag p,
+.modal-telephone-area .modal-body .machine-mobile-payment .machine-mobile-bag p{
+    width: max-content;
+    height: max-content;
+    padding: 0 35px;
+    margin: auto 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+.modal-telephone-area .modal-body .machine-mobile-products .machine-mobile-bag button,
+.modal-telephone-area .modal-body .machine-mobile-payment .machine-mobile-bag button{
+    background-color: #17a2b8;
+    padding: 15px 35px;
+    font-size: 30px;
+    border: none;
+    color: #fff;
+}
+.modal-telephone-area .modal-body .machine-mobile-products div{
+    padding: 15px;
+}
+.modal-telephone-area .modal-body .machine-mobile-products .product-list{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    border-bottom: 15px solid #f86f69;
+    border-radius: 15px;
+    padding: 20px 0 0 0;
+}
+.modal-telephone-area .modal-body .machine-mobile-products .product-list button{
+    background-color: unset;
+    border: none;
+}
+.modal-telephone-area .modal-body .machine-mobile-products .product-list .product{
+    width: 120px;
+    margin: auto;
+    text-align: center;
+    padding: 0;
+}
+
+.modal-telephone-area .modal-body .machine-mobile-products .product-list .product .product-code{
+    border: 2px solid #f86f69;
+    border-radius: 50px;
+    margin: auto auto -10px auto;;
+    width: max-content;
+    padding: 2px 10px;
+    background-color: #fff;
+}
+.modal-telephone-area .modal-body .machine-mobile-products .product-list .product:hover .product-code{
+    border-color: #e8655f;
+    background-color: #e8655f;
+    color: #fff;
+}
+.modal-telephone-area .modal-body .machine-mobile-products .product-list .product:hover .product-value{
+    background-color: #aa2119;
+    border-color: #aa2119;
+    color: #fff;
+}
+.modal-telephone-area .modal-body .machine-mobile-products .product-list .product .product-value{
+    margin: 0 auto 5px auto;
+    border: 1px solid #5c5c5c;
+    color: #5c5c5c;
+    width: 76px;
+    border-radius: 10px;
+    z-index: 1;
+    background-color: #fff;
+    position: relative;
+}
+.modal-telephone-area .modal-body .machine-mobile-products .product-list .product .product-image{
+    height: 100px;
+    margin-bottom: -5px;
+}
+.modal-telephone-area .modal-body .machine-mobile-products .product-list .product .total-product{
+    display: none;
+}
+
+.modal-telephone-area .modal-body .machine-mobile-payment{
+    display: none;
+    height: 824px;
+
+}
+.modal-telephone-area .modal-body .machine-mobile-payment .show-value{
+    height: 699px;
+}
+.modal-telephone-area .modal-body .machine-mobile-payment .machine-mobile-bag{
+    margin-top: 20px;
+    padding: 15px;
+}
+/*------- WALLET -------*/
+.active{
+    display: none;
+}
