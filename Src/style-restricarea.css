@@ -387,6 +387,8 @@
 }
 .modal-historic-area .historic #log{
     margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
 }
 .modal-historic-area .historic button{
     border-radius: 10px;
