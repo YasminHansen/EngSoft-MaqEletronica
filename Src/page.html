@@ -17,7 +17,7 @@
 	<body>
 		<div class="container">
 			<div class="external-options">
-				<div class="modal-class" data-toggle="tooltip" data-toggle="tooltip" data-placement="bottom" title="Área restrita">
+				<div class="modal-class" data-toggle="tooltip" data-toggle="tooltip" data-placement="bottom" title="Acesso mobile">
 					<button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-telephone-area">
 						<i class="fab fa-bluetooth"></i>
 					</button>
@@ -118,15 +118,16 @@
 			</div>
 		</div>
 		<div class="wallet">
-			<div class="wallet-intern">
-				<p><i class="fas fa-money-bill-alt"></i></p>
+			<button class="wallet-intern" onclick="showHistoric()">
+				<p><i class="fas fa-book-open"></i></p>
 				<p id="wallet"></p>
-			</div>
+			</button>
 		</div>
-
-		<h3>Histórico</h3>
-		<p id="log"></p>
-		<button type="button" onclick="ClearLog()">Limpar</button>
+		<div class="historic active" id="historic">
+			<h3>Histórico</h3>
+			<p id="log"></p>
+			<button type="button" onclick="ClearLog()">Limpar</button>
+		</div>
 		  
 
 
@@ -360,23 +361,45 @@
 				  </button>
 				</div>
 				<div class="modal-body">
-					<div class="machine-mobile-products">
-						<div class="product" id="mobile-1"></div>
-						<div class="product" id="mobile-2"></div>
-						<div class="product" id="mobile-3"></div>
-						<div class="product" id="mobile-4"></div>
-						<div class="product" id="mobile-5"></div>
-						<div class="product" id="mobile-6"></div>
-						<div class="product" id="mobile-7"></div>
-						<div class="product" id="mobile-8"></div>
-						<div class="product" id="mobile-9"></div>
+					<div class="machine-mobile-products" id="machine-mobile-products">
+						<div>
+							<div class="product-list">
+								<button class="product" id="mobile-1"></button>
+								<button class="product" id="mobile-2"></button>
+								<button class="product" id="mobile-3"></button>
+							</div>
+							<div class="product-list">
+								<button class="product" id="mobile-4"></button>
+								<button class="product" id="mobile-5"></button>
+								<button class="product" id="mobile-6"></button>
+							</div>
+							<div class="product-list">
+								<button class="product" id="mobile-7"></button>
+								<button class="product" id="mobile-8"></button>
+								<button class="product" id="mobile-9"></button>
+							</div>
+						</div>
 						<div class="machine-mobile-bag">
 							<p>Carrinho: </p><p id="cartValue"></p>
-							<button class="confirm" data-toggle="tooltip" data-toggle="tooltip" data-placement="bottom" title="Confirmar pagamento" onClick="ConfirmCart()">
+							<button onclick="goToTelephonePayment(); ConfirmCart()" class="confirm" data-toggle="tooltip" data-toggle="tooltip" data-placement="bottom" title="Confirmar pagamento">
 								<i class="fas fa-shopping-cart"></i>
 							</button>
 						</div>
 					</div>
+
+
+					<div class="machine-mobile-payment" id="machine-mobile-payment">
+						<div class="show-value">
+							<p>Produtos selecionados:</p>
+						</div>
+						<div class="machine-mobile-bag">
+							<p>Valor total: --</p>
+							<button class="confirm" data-toggle="tooltip" data-toggle="tooltip" data-placement="bottom" title="Confirmar pagamento">
+								<i class="fas fa-check"></i>
+							</button>
+						</div>
+					</div>
+
 				</div>
 				<div class="modal-footer">
 				  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

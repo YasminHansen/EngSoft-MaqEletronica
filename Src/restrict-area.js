@@ -93,3 +93,13 @@ function goToSupplierRemove(){
     document.getElementById("supplier-options").style.display = "none";
     document.getElementById("supplier-remove").style.display = "block";
 }
+
+//FUNÇÕES DO TELEFONE
+function goToTelephonePayment(){
+    document.getElementById("machine-mobile-products").style.display = "none";
+    document.getElementById("machine-mobile-payment").style.display = "block";
+}
+
+function showHistoric(){
+    document.getElementById("historic").classList.toggle('active');
+}

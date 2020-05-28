@@ -245,21 +245,25 @@
     margin: 10px;
     border-radius: 50px;
     border-left: 3px solid #606060;
-    border-top: 3px solid #606060
+    border-top: 3px solid #606060;
+    height: 979px;
 }
-.modal-telephone-area .modal-body .machine-mobile-products{
+.modal-telephone-area .modal-body .machine-mobile-products, 
+.modal-telephone-area .modal-body .machine-mobile-payment{
     background-color: #fff;
     margin: 60px 10px;
 }
 
-.modal-telephone-area .modal-body .machine-mobile-products .machine-mobile-bag{
+.modal-telephone-area .modal-body .machine-mobile-products .machine-mobile-bag,
+.modal-telephone-area .modal-body .machine-mobile-payment .machine-mobile-bag{
     background-color: #8acdf8;
     color: #fff;
     display: flex;
     justify-content: space-between;
-    
+    margin-top: 20px;
 }
-.modal-telephone-area .modal-body .machine-mobile-products .machine-mobile-bag p{
+.modal-telephone-area .modal-body .machine-mobile-products .machine-mobile-bag p,
+.modal-telephone-area .modal-body .machine-mobile-payment .machine-mobile-bag p{
     width: max-content;
     height: max-content;
     padding: 0 35px;
@@ -267,13 +271,85 @@
     font-size: 20px;
     font-weight: bold;
 }
-.modal-telephone-area .modal-body .machine-mobile-products .machine-mobile-bag button{
+.modal-telephone-area .modal-body .machine-mobile-products .machine-mobile-bag button,
+.modal-telephone-area .modal-body .machine-mobile-payment .machine-mobile-bag button{
     background-color: #17a2b8;
     padding: 15px 35px;
     font-size: 30px;
     border: none;
     color: #fff;
 }
-.modal-telephone-area .modal-body .machine-mobile-products .machine-mobile-bag i{
+.modal-telephone-area .modal-body .machine-mobile-products div{
+    padding: 15px;
+}
+.modal-telephone-area .modal-body .machine-mobile-products .product-list{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    border-bottom: 15px solid #f86f69;
+    border-radius: 15px;
+    padding: 20px 0 0 0;
+}
+.modal-telephone-area .modal-body .machine-mobile-products .product-list button{
+    background-color: unset;
+    border: none;
+}
+.modal-telephone-area .modal-body .machine-mobile-products .product-list .product{
+    width: 120px;
+    margin: auto;
+    text-align: center;
+    padding: 0;
+}
 
+.modal-telephone-area .modal-body .machine-mobile-products .product-list .product .product-code{
+    border: 2px solid #f86f69;
+    border-radius: 50px;
+    margin: auto auto -10px auto;;
+    width: max-content;
+    padding: 2px 10px;
+    background-color: #fff;
+}
+.modal-telephone-area .modal-body .machine-mobile-products .product-list .product:hover .product-code{
+    border-color: #e8655f;
+    background-color: #e8655f;
+    color: #fff;
+}
+.modal-telephone-area .modal-body .machine-mobile-products .product-list .product:hover .product-value{
+    background-color: #aa2119;
+    border-color: #aa2119;
+    color: #fff;
+}
+.modal-telephone-area .modal-body .machine-mobile-products .product-list .product .product-value{
+    margin: 0 auto 5px auto;
+    border: 1px solid #5c5c5c;
+    color: #5c5c5c;
+    width: 76px;
+    border-radius: 10px;
+    z-index: 1;
+    background-color: #fff;
+    position: relative;
+}
+.modal-telephone-area .modal-body .machine-mobile-products .product-list .product .product-image{
+    height: 100px;
+    margin-bottom: -5px;
+}
+.modal-telephone-area .modal-body .machine-mobile-products .product-list .product .total-product{
+    display: none;
+}
+
+.modal-telephone-area .modal-body .machine-mobile-payment{
+    display: none;
+    height: 824px;
+
+}
+.modal-telephone-area .modal-body .machine-mobile-payment .show-value{
+    height: 699px;
+}
+.modal-telephone-area .modal-body .machine-mobile-payment .machine-mobile-bag{
+    margin-top: 20px;
+    padding: 15px;
+}
+/*------- WALLET -------*/
+.active{
+    display: none;
 }
