@@ -9,9 +9,12 @@
 		<link rel='stylesheet' href='style-restricarea.css'>
 		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-		<script type="text/javascript" src="data.js"></script>
-		<script src='main.js'></script>
+		<script type="text/javascript" src="data.js"x></script>
 		<script src='restrict-area.js'></script>
+		<script src='log.js'></script>
+		<script src='writeInterface.js'></script>
+		<script src='insertMoney.js'></script>
+		<script src='productChoice.js'></script>
 	</head>
 	<body>
 		<div class="container">
@@ -159,8 +162,8 @@
 							<h3><i class="fas fa-user"></i> Vendedor</h3>
 						</div>
 						<div class="info-vendor-login">
-							<input placeholder="Código de acesso" class="form-control">
-							<input placeholder="Confirmar código de acesso" class="form-control" >
+							<input placeholder="Código de acesso" class="form-control" id="vendorLogin">
+							<input placeholder="Confirmar código de acesso" class="form-control" id="vendorPassword" type="password">
 							<button onclick="goToVendorOptions()">Entrar</button>
 						</div>
 					</div>
@@ -194,7 +197,7 @@
 						</div>
 						<div class="value-remove">
 							<p>* Ao aceitar retirar o dinheiro da máquina, um valor mínimo continuará depositado.</p>
-							<button>Retirar</button>
+							<button onClick="WithdrawMachineMoney()">Retirar</button>
 						</div>
 					</div>
 
@@ -205,17 +208,17 @@
 						<div class="add-value">
 							<p>Adicionar dinheiro</p>
 							<i class="fas fa-coins"></i> R$0.50 
-							<input>
+							<input id="inputC50">
 							</br>	
 							<i class="fas fa-coins"></i> R$1.00
-							<input>
+							<input id="inputC1">
 							</br>
 							<i class="fas fa-money-bill-alt"></i> R$2.00
-							<input>
+							<input id="inputB2">
 							</br>
 							<i class="fas fa-money-bill-alt"></i> R$5.00
-							<input>
-							<button>Confirmar</button>
+							<input id="inputB5">
+							<button onClick="AddMachineMoney()">Confirmar</button>
 						</div>
 					</div>
 

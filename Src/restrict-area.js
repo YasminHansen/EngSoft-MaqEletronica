@@ -9,6 +9,10 @@
 ///     ADD
 ///     EDIT
 ///     REMOVE
+
+var vendorLogin = 'adminVend';
+var vendorPassword = '123';
+
 function closeModal(){
     document.getElementById("area-restrict-home").style.display = "flex";
     document.getElementById("vendor-login").style.display= "none";
@@ -29,8 +33,16 @@ function goToVendorLogin(){
 }
 
 function goToVendorOptions(){
-    document.getElementById("vendor-login").style.display= "none";
-    document.getElementById("vendor-options").style.display= "block";
+	var login = document.getElementById("vendorLogin").value;
+	var pass = document.getElementById("vendorPassword").value;
+	
+	if(login == vendorLogin && pass == vendorPassword){
+		document.getElementById("vendor-login").style.display= "none";
+		document.getElementById("vendor-options").style.display= "block";
+	}
+	else{
+		alert("Usuário ou senha incorretos!");
+	}
 }
 
 function goToVendorRemove(){
