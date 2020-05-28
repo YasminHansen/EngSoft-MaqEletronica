@@ -35,17 +35,25 @@
 					<h1 class="machine-title">Máquina de vendas</h1>
 				</div>
 				<div class="machine-display col-9">
-				
 					<div class="machine-products">
-						<div class="product" id="1"></div>
-						<div class="product" id="2"></div>
-						<div class="product" id="3"></div>
-						<div class="product" id="4"></div>
-						<div class="product" id="5"></div>
-						<div class="product" id="6"></div>
-						<div class="product" id="7"></div>
-						<div class="product" id="8"></div>
-						<div class="product" id="9"></div>
+						<div class="product-list">
+							<div class="product" id="1"></div>
+							<div class="product" id="2"></div>
+							<div class="product" id="3"></div>
+							<div class="code-place"></div>
+						</div>
+						<div class="product-list">
+							<div class="product" id="4"></div>
+							<div class="product" id="5"></div>
+							<div class="product" id="6"></div>
+							<div class="code-place"></div>
+						</div>
+						<div class="product-list">
+							<div class="product" id="7"></div>
+							<div class="product" id="8"></div>
+							<div class="product" id="9"></div>
+							<div class="code-place"></div>
+						</div>
 					</div>
 				</div>
 				<div class="machine-options col-3">
@@ -381,25 +389,11 @@
 						</div>
 						<div class="machine-mobile-bag">
 							<p>Carrinho: </p><p id="cartValue"></p>
-							<button onclick="goToTelephonePayment(); ConfirmCart()" class="confirm" data-toggle="tooltip" data-toggle="tooltip" data-placement="bottom" title="Confirmar pagamento">
+							<button onclick="ConfirmCart()" class="confirm" data-toggle="tooltip" data-toggle="tooltip" data-placement="bottom" title="Confirmar pagamento">
 								<i class="fas fa-shopping-cart"></i>
 							</button>
 						</div>
 					</div>
-
-
-					<div class="machine-mobile-payment" id="machine-mobile-payment">
-						<div class="show-value">
-							<p>Produtos selecionados:</p>
-						</div>
-						<div class="machine-mobile-bag">
-							<p>Valor total: --</p>
-							<button class="confirm" data-toggle="tooltip" data-toggle="tooltip" data-placement="bottom" title="Confirmar pagamento">
-								<i class="fas fa-check"></i>
-							</button>
-						</div>
-					</div>
-
 				</div>
 				<div class="modal-footer">
 				  <button onclick="closeModalTelephone()" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

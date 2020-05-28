@@ -101,15 +101,15 @@ function goToSupplierRemove(){
 }
 
 //FUNÇÕES DO TELEFONE
-function closeModalTelephone(){
-    document.getElementById("machine-mobile-products").style.display = "block";
-    document.getElementById("machine-mobile-payment").style.display = "none";
-}
+// function closeModalTelephone(){
+//     document.getElementById("machine-mobile-products").style.display = "block";
+//     document.getElementById("machine-mobile-payment").style.display = "none";
+// }
 
-function goToTelephonePayment(){
-    document.getElementById("machine-mobile-products").style.display = "none";
-    document.getElementById("machine-mobile-payment").style.display = "block";
-}
+// function goToTelephonePayment(){
+//     document.getElementById("machine-mobile-products").style.display = "none";
+//     document.getElementById("machine-mobile-payment").style.display = "block";
+// }
 
 function showHistoric(){
     document.getElementById("historic").classList.toggle('active');
