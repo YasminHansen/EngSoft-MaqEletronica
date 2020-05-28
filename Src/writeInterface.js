@@ -12,9 +12,16 @@ function WriteInput(){
 
 /*Escreve os produtos e suas informações na máquina*/
 function WriteProducts(){
-
 	for(var i = 0; i < product.length; i++){
 		document.getElementById(product[i].code).innerHTML = "<p>" + product[i].code + " - " 
+		+ product[i].name + "</p><p class='product-value'> Custo: R$ " + product[i].price 
+		+ "</p><p class='total-product' id='total-product'>" + product[i].quantity;
+	}
+}
+
+function WriteMobileProducts(){
+	for(var i = 0; i < product.length; i++){
+		document.getElementById(product[i].codeMobile).innerHTML = "<p>" + product[i].code + " - " 
 		+ product[i].name + "</p><p class='product-value'> Custo: R$ " + product[i].price 
 		+ "</p><p class='total-product' id='total-product'>" + product[i].quantity;
 	}
@@ -31,4 +38,5 @@ function WriteAll(){
 	WriteBalance();
 	WriteInput();
 	WriteProducts();
+	WriteMobileProducts();
 }

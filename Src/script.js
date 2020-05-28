@@ -45,7 +45,7 @@ function RemoveProduct(){
 		alert("Código inválido!");
 	}
 	
-	WriteProducts();
+	WriteAll();
 }
 
 function NewProduct(){
@@ -67,7 +67,7 @@ function NewProduct(){
 			product[index].quantity = newQuantity;
 		}
 
-		WriteProducts();
+		WriteAll();
 	}
 	else if(result == 1){
 		alert("Já existe um produto cadastrado com esse código!");
@@ -104,7 +104,7 @@ function AlterProduct(){
 		alert("Código inválido!");
 	}
 	
-	WriteProducts();
+	WriteAll();
 }
 
 function CheckExistingCode(code){
