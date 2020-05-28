@@ -389,6 +389,13 @@
     margin-top: 10px;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+}
+.modal-historic-area .historic #log div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
 }
 .modal-historic-area .historic button{
     border-radius: 10px;

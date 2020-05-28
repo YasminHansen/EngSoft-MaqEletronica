@@ -46,9 +46,9 @@ function ConfirmMoney(){
 				if(result == 1){
 					for(var i=0; i < product.length; i++){
 						if(product[i].code == productCode){							
-							WriteLog("<p>" + product[i].name + " <i class='fas fa-dollar-sign'></i>" + product[i].price + "</p>" +
+							WriteLog("<div><p>" + product[i].name + " <i class='fas fa-dollar-sign'></i>" + product[i].price + "</p>" +
 							"<p>Saldo <i class='fas fa-dollar-sign'></i>" + balance + "<p>" + 
-							"Troco <i class='fas fa-dollar-sign'></i>" + (balance-product[i].price));
+							"Troco <i class='fas fa-dollar-sign'></i>" + (balance-product[i].price) + "</div>");
 							document.getElementById("remove-products").classList.add('user-product');
 							walletMoney += (balance-product[i].price);
 							
@@ -76,9 +76,9 @@ function ConfirmMoney(){
 			for(var i=0; i < product.length; i++){
 				if(product[i].code == productCode){
 				
-					WriteLog("<p>" + product[i].name + " <i class='fas fa-dollar-sign'></i>" + product[i].price + "</p>" +
+					WriteLog("<div><p>" + product[i].name + " <i class='fas fa-dollar-sign'></i>" + product[i].price + "</p>" +
 					"<p>Saldo <i class='fas fa-dollar-sign'></i>" + balance + "<p>" + 
-					"Troco <i class='fas fa-dollar-sign'></i>0");
+					"Troco <i class='fas fa-dollar-sign'></i>0</div>");
 					document.getElementById("remove-products").classList.add('user-product');
 					machineMoney.c50 += balanceMoney.c50;
 					machineMoney.c1 += balanceMoney.c1;
