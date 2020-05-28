@@ -392,12 +392,12 @@
 		  </div>
 
 		<!-- HISTORIC -->
-		  <div class="modal fade modal-historic-area" id="modal-historic-area" tabindex="-1" role="dialog" aria-labelledby="historicarea" aria-hidden="true" onclick="ClearLog()">
+		  <div class="modal fade modal-historic-area" id="modal-historic-area" tabindex="-1" role="dialog" aria-labelledby="historicarea" aria-hidden="true" >
 			<div class="modal-dialog" role="document">
 			  <div class="modal-content">
 				<div class="modal-header">
 				  <h5 class="modal-title" id="exampleModalLabel">Histórico</h5>
-				  <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeModalHistoric()">
+				  <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="ClearLog()">
 					<span aria-hidden="true">&times;</span>
 				  </button>
 				</div>
@@ -408,11 +408,10 @@
 							
 							</div>
 							<p id="log"></p>
-						<button type="button" onclick="ClearLog()">Limpar</button>
 					</div>
 				</div>
 				<div class="modal-footer">
-				  <button onclick="closeModalHistoric()" type="button" class="btn btn-secondary" data-dismiss="modal" onclick="ClearLog()">Close</button>
+				  <button onclick="ClearLog()" type="button" class="btn btn-secondary" data-dismiss="modal" >Close</button>
 				</div>
 			  </div>
 			</div>
