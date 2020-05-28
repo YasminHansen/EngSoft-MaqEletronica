@@ -366,3 +366,28 @@
 
 
 /*----HISTORIC----*/
+.modal-historic-area{
+    text-align: center;
+}
+.modal-historic-area .wallet{
+    display: flex;
+    font-size: 17px;
+    width: max-content;
+    margin: auto    ;
+}
+.modal-historic-area .wallet p{
+    margin: 0;
+    width: max-content;
+    margin: auto 8px auto 0;
+}
+.modal-historic-area .wallet i{
+    height: max-content;
+    margin: auto 5px;
+    color: #88a972;
+}
+.modal-historic-area .historic #log{
+    margin-top: 10px;
+}
+.modal-historic-area .historic button{
+    border-radius: 10px;
+}

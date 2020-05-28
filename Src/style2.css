@@ -79,7 +79,7 @@ body{
 .machine-content{
     position: relative;
     background-color: #f86f69;
-    margin-top: 80px;
+    margin-top: 55px;
     border: 2px solid;
     border-color: #f98883 #994440  #994440  #f98883;
 
@@ -182,6 +182,7 @@ body{
     border-top-right-radius: 15px;
     border: 2px solid #ffb2af;
     padding-bottom: 45px;
+    height: 694px;
 }
 .machine-content .machine-options .keyboard-info{
     margin-top: 30px;

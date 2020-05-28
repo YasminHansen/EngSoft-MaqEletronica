@@ -46,7 +46,7 @@ function ConfirmMoney(){
 				if(result == 1){
 					for(var i=0; i < product.length; i++){
 						if(product[i].code == productCode){							
-							WriteLog("Comprou " + product[i].name + " por R$ " + product[i].price + " / O saldo total era de R$ " + balance + " / Devolveu troco de R$ " + (balance-product[i].price));
+							WriteLog("- Comprou " + product[i].name + " por R$ " + product[i].price + " / O saldo total era de R$ " + balance + " / Devolveu troco de R$ " + (balance-product[i].price));
 							document.getElementById("remove-products").classList.add('user-product');
 							walletMoney += (balance-product[i].price);
 							
@@ -74,7 +74,7 @@ function ConfirmMoney(){
 			for(var i=0; i < product.length; i++){
 				if(product[i].code == productCode){
 				
-					WriteLog("Comprou " + product[i].name + " por R$ " + product[i].price + " / O saldo total era de R$ " + balance + " / Não precisou de troco");
+					WriteLog("- Comprou " + product[i].name + " por R$ " + product[i].price + " / O saldo total era de R$ " + balance + " / Não precisou de troco");
 					document.getElementById("remove-products").classList.add('user-product');
 					machineMoney.c50 += balanceMoney.c50;
 					machineMoney.c1 += balanceMoney.c1;

@@ -392,7 +392,7 @@
 		  </div>
 
 		<!-- HISTORIC -->
-		  <div class="modal fade modal-historic-area" id="modal-historic-area" tabindex="-1" role="dialog" aria-labelledby="historicarea" aria-hidden="true">
+		  <div class="modal fade modal-historic-area" id="modal-historic-area" tabindex="-1" role="dialog" aria-labelledby="historicarea" aria-hidden="true" onclick="ClearLog()">
 			<div class="modal-dialog" role="document">
 			  <div class="modal-content">
 				<div class="modal-header">
@@ -402,14 +402,17 @@
 				  </button>
 				</div>
 				<div class="modal-body">
-					<div class="" id="historic">
-						<p id="log"></p>
-						<p id="wallet"></p>
+					<div class="historic" id="historic">
+						<div class="wallet">
+							<i class="fas fa-money-bill"></i><p id="wallet"></p>
+							
+							</div>
+							<p id="log"></p>
 						<button type="button" onclick="ClearLog()">Limpar</button>
 					</div>
 				</div>
 				<div class="modal-footer">
-				  <button onclick="closeModalHistoric()" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				  <button onclick="closeModalHistoric()" type="button" class="btn btn-secondary" data-dismiss="modal" onclick="ClearLog()">Close</button>
 				</div>
 			  </div>
 			</div>
