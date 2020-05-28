@@ -111,6 +111,11 @@ function goToSupplierRemove(){
 //     document.getElementById("machine-mobile-payment").style.display = "block";
 // }
 
-function showHistoric(){
-    document.getElementById("historic").classList.toggle('active');
+// function showHistoric(){
+//     document.getElementById("historic").classList.toggle('active');
+// }
+
+//FUNÇÕES DO HISTÓRICO
+function removeUserProduct(){
+    document.getElementById("remove-products").classList.remove('user-product');
 }

@@ -29,7 +29,8 @@ body{
 }
 /*-------------MODAL AREA RESTRITA ---------------*/
 .modal-restrict-area,
-.modal-telephone-area{
+.modal-telephone-area,
+.modal-historic-area{
     z-index: 99999 !important;
 }
 /*-----MACHINE TITLE------*/
@@ -139,10 +140,11 @@ body{
 .machine-products .product-list .product-image{
     height: 120px;
     width: 120px;
-    margin: auto auto -10px auto;
+    margin: auto auto -40px auto;
+    transform: rotate(90deg);
 }
 .machine-products .product .product-value{
-    margin: 0 auto 5px auto;
+    margin: 0 auto 10px auto;
     border: 1px solid #5c5c5c;
     color: #5c5c5c;
     width: 76px;
@@ -291,6 +293,27 @@ body{
     padding: 5px 180px 25px;
     border-radius: 10px;
     border: 2px solid #ffb2af;
+    cursor: pointer;
+}
+.machine-content .take-products .remove-products.user-product i{
+    animation: removeAnimate 2s linear infinite;
+}
+@keyframes removeAnimate{
+    0%, 100%{
+        color: #fff;
+        /*filter: blur(1px);*/
+        text-shadow: 0 0 10px #8acdf8,
+                     0 0 20px #8acdf8,
+                     0 0 30px #8acdf8;
+    }
+
+    50%{
+        color: #fff;
+        /*filter: blur(1px);*/
+        text-shadow: 0 0 10px #17a4ff,
+                     0 0 20px #17a4ff,
+                     0 0 30px #17a4ff;
+    }
 }
 .machine-content .take-products .money{
     margin-top: auto;
@@ -320,3 +343,4 @@ body{
     margin: 0 40px;
     border-radius: 5px;
 }
+
