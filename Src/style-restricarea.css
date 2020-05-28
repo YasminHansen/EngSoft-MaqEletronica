@@ -279,7 +279,7 @@
     border: none;
     color: #fff;
 }
-.modal-telephone-area .modal-body .machine-mobile-products div{
+.modal-telephone-area .modal-body .machine-mobile-products .all-products{
     padding: 15px;
 }
 .modal-telephone-area .modal-body .machine-mobile-products .product-list{
@@ -289,6 +289,7 @@
     border-bottom: 15px solid #f86f69;
     border-radius: 15px;
     padding: 20px 0 0 0;
+
 }
 .modal-telephone-area .modal-body .machine-mobile-products .product-list button{
     background-color: unset;
@@ -299,6 +300,7 @@
     margin: auto;
     text-align: center;
     padding: 0;
+    position: relative;
 }
 
 .modal-telephone-area .modal-body .machine-mobile-products .product-list .product .product-code{
@@ -334,12 +336,21 @@
     margin-bottom: -5px;
 }
 .modal-telephone-area .modal-body .machine-mobile-products .product-list .product .total-product{
-    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+    border: 1px solid #f86f69;
+    border-radius: 50px;
+    background: #f86f69;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    width: 21px;
 }
 
 .modal-telephone-area .modal-body .machine-mobile-payment{
     display: none;
-    height: 824px;
+    height: 794px;
 
 }
 .modal-telephone-area .modal-body .machine-mobile-payment .show-value{
@@ -347,7 +358,6 @@
 }
 .modal-telephone-area .modal-body .machine-mobile-payment .machine-mobile-bag{
     margin-top: 20px;
-    padding: 15px;
 }
 /*------- WALLET -------*/
 .active{

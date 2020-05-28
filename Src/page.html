@@ -356,13 +356,13 @@
 			  <div class="modal-content">
 				<div class="modal-header">
 				  <h5 class="modal-title" id="exampleModalLabel">Área Virtual</h5>
-				  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				  <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeModalTelephone()">
 					<span aria-hidden="true">&times;</span>
 				  </button>
 				</div>
 				<div class="modal-body">
 					<div class="machine-mobile-products" id="machine-mobile-products">
-						<div>
+						<div class="all-products">
 							<div class="product-list">
 								<button class="product" id="mobile-1" onClick="AddToCart(1)"></button>
 								<button class="product" id="mobile-2" onClick="AddToCart(2)"></button>
@@ -402,7 +402,7 @@
 
 				</div>
 				<div class="modal-footer">
-				  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				  <button onclick="closeModalTelephone()" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 				</div>
 			  </div>
 			</div>
