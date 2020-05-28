@@ -22,5 +22,10 @@ function AddMachineMoney(){
 	machineMoney.b2 += parseFloat(document.getElementById("inputB2").value) || 0;
 	machineMoney.b5 += parseFloat(document.getElementById("inputB5").value) || 0;
 	
+	document.getElementById("inputC50").value = "";
+	document.getElementById("inputC1").value = "";
+	document.getElementById("inputB2").value = "";
+	document.getElementById("inputB5").value = "";
+	
 	alert("Dinheiro adicionado com sucesso!");
 }

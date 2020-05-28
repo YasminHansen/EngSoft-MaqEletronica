@@ -11,10 +11,10 @@
 ///     REMOVE
 
 var vendorLogin = 'admin';
-var vendorPassword = 'vendedor';
+var vendorPassword = '123';
 
 var supplierLogin = 'admin';
-var supplierPassword = 'abastecedor';
+var supplierPassword = '123';
 
 function closeModal(){
     document.getElementById("area-restrict-home").style.display = "flex";
@@ -43,6 +43,9 @@ function goToVendorOptions(){
 		document.getElementById("vendor-login").style.display= "none";
 		document.getElementById("vendor-options").style.display= "block";
 		WriteAll();
+		
+		document.getElementById("vendorLogin").value = "";
+		document.getElementById("vendorPassword").value = "";
 	}
 	else{
 		alert("Usuário ou senha incorretos!");
@@ -73,6 +76,9 @@ function goToSupplierOptions(){
 		document.getElementById("supplier-login").style.display= "none";
 		document.getElementById("supplier-options").style.display = "block";
 		WriteAll();
+		
+		document.getElementById("supplierLogin").value = "";
+		document.getElementById("supplierPassword").value = "";
 	}
 	else{
 		alert("Usuário ou senha incorretos!");

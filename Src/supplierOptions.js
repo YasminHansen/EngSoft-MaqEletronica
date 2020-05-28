@@ -9,9 +9,13 @@ function RemoveProduct(){
 		product[index].name = "Vazio";
 		product[index].price = 0.00;
 		product[index].quantity = 0;
+		
+		document.getElementById("removeCode").value = "";
+		
+		alert("Produto removido com sucesso!");
 	}
 	else if(result == 0){
-		alert("Esse espaço já está vazio!")
+		alert("Esse espaço já está vazio!");
 	}
 	else{
 		alert("Código inválido!");
@@ -37,6 +41,13 @@ function NewProduct(){
 			product[index].name = newName;
 			product[index].price = newPrice;
 			product[index].quantity = newQuantity;
+			
+			document.getElementById("newCode").value = "";
+			document.getElementById("newName").value = "";
+			document.getElementById("newPrice").value = "";
+			document.getElementById("newQuantity").value = "";
+			
+			alert("Produto adicionado com sucesso!");
 		}
 
 		WriteAll();
@@ -68,6 +79,13 @@ function AlterProduct(){
 		
 		if(alterQuantity != "")
 			product[index].quantity = alterQuantity;
+		
+		document.getElementById("alterCode").value = 0;
+		document.getElementById("alterName").value = 0;
+		document.getElementById("alterPrice").value = 0;
+		document.getElementById("alterQuantity").value = 0;
+		
+		alert("Produto alterado com sucesso!");
 	}
 	else if(result == 0){
 		alert("Esse espaço está vazio. Você pode adicionar este produto utilizando a tela anterior.")
