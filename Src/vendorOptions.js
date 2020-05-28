@@ -4,6 +4,8 @@ function WithdrawMachineMoney(){
 	machineMoney.b2 = 0;
 	machineMoney.b5 = 0;
 	
+	WriteMachineMoney();
+	
 	alert("Dinheiro removido com sucesso!");
 }
 
@@ -14,4 +16,11 @@ function AddMachineMoney(){
 	machineMoney.b5 += parseFloat(document.getElementById("inputB5").value) || 0;
 	
 	alert("Dinheiro adicionado com sucesso!");
+}
+
+function WriteMachineMoney(){
+	document.getElementById("showC50").innerHTML = machineMoney.c50;
+	document.getElementById("showC1").innerHTML = machineMoney.c1;
+	document.getElementById("showB2").innerHTML = machineMoney.b2;
+	document.getElementById("showB5").innerHTML = machineMoney.b5;
 }

@@ -42,6 +42,7 @@ function goToVendorOptions(){
 	if(login == vendorLogin && pass == vendorPassword){
 		document.getElementById("vendor-login").style.display= "none";
 		document.getElementById("vendor-options").style.display= "block";
+		WriteAll();
 	}
 	else{
 		alert("Usuário ou senha incorretos!");
@@ -71,6 +72,7 @@ function goToSupplierOptions(){
 	if(login == supplierLogin && pass == supplierPassword){
 		document.getElementById("supplier-login").style.display= "none";
 		document.getElementById("supplier-options").style.display = "block";
+		WriteAll();
 	}
 	else{
 		alert("Usuário ou senha incorretos!");

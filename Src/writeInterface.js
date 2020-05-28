@@ -39,4 +39,5 @@ function WriteAll(){
 	WriteInput();
 	WriteProducts();
 	WriteMobileProducts();
+	WriteMachineMoney();
 }
