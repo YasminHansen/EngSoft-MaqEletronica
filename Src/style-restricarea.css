@@ -83,13 +83,72 @@
 .modal-restrict-area .vendor-options button:hover{
     background-color: #e8655f;
 }
-/*---VENDOR REMOVE-----*/
+/*---VENDOR REMOVE / ADD -----*/
 .modal-restrict-area .vendor-remove-value,
 .modal-restrict-area .vendor-add-value{
     display: none;
 }
 
-/*-----SUPPLIER-------*/
+/*---- VENDOR REMOVE ------*/
+.modal-restrict-area .vendor-remove-value {
+    text-align: center;
+}
+.modal-restrict-area .vendor-remove-value .value-show{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+}
+.modal-restrict-area .vendor-remove-value .value-show div{
+    display: flex;
+    margin: auto 0;
+}
+.modal-restrict-area .vendor-remove-value .value-show div i{
+    height: min-content;
+    margin: auto 10px;
+    width: 20px;
+}
+.modal-restrict-area .vendor-remove-value .value-remove p{
+    text-align: left;
+    font-size: 14px;
+    color: #e8655f;
+    margin-top: 15px;
+}
+.modal-restrict-area .vendor-remove-value .value-remove button{
+    border-radius: 10px;
+}
+
+/*---- VENDOR ADD ------*/
+.modal-restrict-area .vendor-add-value{
+    text-align: center;
+}
+.modal-restrict-area .vendor-add-value .add-value{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+}
+.modal-restrict-area .vendor-add-value .add-value div{
+    display: flex;
+    margin: 5px 0;
+    text-align: left;
+}
+.modal-restrict-area .vendor-add-value .add-value div p{
+    height: min-content;
+    margin: auto 10px auto 0;
+}
+.modal-restrict-area .vendor-add-value .add-value div i{
+    height: min-content;
+    margin: auto 10px;
+    width: 20px;
+}
+.modal-restrict-area .vendor-add-value button{
+    margin-top: 20px;
+    border-radius: 10px;
+}
+/*---------------------*/
+/*-------SUPPLIER------*/
+/*---------------------*/
 .modal-restrict-area .supplier-login,
 .modal-restrict-area .supplier-options,
 .modal-restrict-area .supplier-insert,
@@ -126,13 +185,16 @@
     margin-bottom: 0;
 }
 .modal-restrict-area .supplier-options .options div button{
-    background-color: #e8655f;
+    background-color: #f86f69;
     color: #fff;
     border: none;
     width: 115px;
     height: 99px;
     border-radius: 10px;
     font-size: 35px;
+}
+.modal-restrict-area .supplier-options .options div button:hover{
+    background-color: #e8655f;
 }
 
 /*----VENDOR INSERT / EDIT / REMOVE  ----*/
