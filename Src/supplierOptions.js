@@ -27,8 +27,8 @@ function RemoveProduct(){
 function NewProduct(){
 	newCode = document.getElementById("newCode").value;
 	newName = document.getElementById("newName").value;
-	newPrice = document.getElementById("newPrice").value;
-	newQuantity = document.getElementById("newQuantity").value;
+	newPrice = parseFloat(document.getElementById("newPrice").value);
+	newQuantity = parseFloat(document.getElementById("newQuantity").value);
 	
 	var index = newCode - 1;
 	var result = CheckExistingCode(newCode);
@@ -64,8 +64,8 @@ function AlterProduct(){
 
 	alterCode = document.getElementById("alterCode").value || 0;
 	alterName = document.getElementById("alterName").value;
-	alterPrice = document.getElementById("alterPrice").value;
-	alterQuantity = document.getElementById("alterQuantity").value;
+	alterPrice = parseFloat(document.getElementById("alterPrice").value);
+	alterQuantity = parseFloat(document.getElementById("alterQuantity").value);
 
 	var index = alterCode - 1;
 	var result = CheckExistingCode(alterCode);
@@ -80,10 +80,10 @@ function AlterProduct(){
 		if(alterQuantity != "")
 			product[index].quantity = alterQuantity;
 		
-		document.getElementById("alterCode").value = 0;
-		document.getElementById("alterName").value = 0;
-		document.getElementById("alterPrice").value = 0;
-		document.getElementById("alterQuantity").value = 0;
+		document.getElementById("alterCode").value = "";
+		document.getElementById("alterName").value = "";
+		document.getElementById("alterPrice").value = "";
+		document.getElementById("alterQuantity").value = "";
 		
 		alert("Produto alterado com sucesso!");
 	}
