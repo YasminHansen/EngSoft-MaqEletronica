@@ -26,141 +26,82 @@ var prices = [5.00, 4.00, 3.50, 2.50];
 var quantities = [3, 5, 4, 5]
 
 
-function RemoveProduct(removedCode){
-
-	var index = FindProductIndex(removedCode);
-	var valueRemoved = 0;
+function RemoveProduct(){
 	
-	if(index != "X"){
-		if(index == (codes.length - 1)){
-			codes.pop();
-			products.pop();
-			prices.pop();
-			quantities.pop();
-		}
-		else{
-			valueRemoved = RemoveCodeByIndex(index);
-			codes.pop();
-			valueRemoved = RemoveProductByIndex(index);
-			products.pop();
-			valueRemoved = RemovePriceByIndex(index);
-			prices.pop();
-			valueRemoved = RemoveQuantityByIndex(index);
-			quantities.pop();
-		}
+	removeCode = document.getElementById("removeCode").value;
+	
+	var index = removeCode - 1;
+	var result = CheckExistingCode(removeCode);
+	
+	if(result == 1){
+		product[index].name = "Vazio";
+		product[index].price = 0.00;
+		product[index].quantity = 0;
+	}
+	else if(result == 0){
+		alert("Esse espaço já está vazio!")
 	}
 	else{
-		alert("Não há produtos com esse código!");
+		alert("Código inválido!");
 	}
 	
 	WriteProducts();
 }
 
-function RemoveCodeByIndex(index){
+function NewProduct(){
+	newCode = document.getElementById("newCode").value;
+	newName = document.getElementById("newName").value;
+	newPrice = document.getElementById("newPrice").value;
+	newQuantity = document.getElementById("newQuantity").value;
 	
-	var oldValue = product[index].code;
-	var newValue = 0;
+	var index = newCode - 1;
+	var result = CheckExistingCode(newCode);
 	
-	if(index == (product.length - 1)){
-		return oldValue;
-	}
-	else{
-		newValue = RemoveCodeByIndex(index + 1);
-	}
-	
-	product[index].code = newValue;
-	return oldValue;
-}
-
-function RemoveProductByIndex(index){
-	
-	var oldValue = product[index].name;
-	var newValue = 0;
-	
-	if(index == (product.length - 1)){
-		return oldValue;
-	}
-	else{
-		newValue = RemoveProductByIndex(index + 1);
-	}
-	
-	product[index].name = newValue;
-	return oldValue;
-}
-
-function RemovePriceByIndex(index){
-	
-	var oldValue = product[index].price;
-	var newValue = 0;
-	
-	if(index == (product.length - 1)){
-		return oldValue;
-	}
-	else{
-		newValue = RemovePriceByIndex(index + 1);
-	}
-	
-	product[index].price = newValue;
-	return oldValue;
-}
-
-function RemoveQuantityByIndex(index){
-	
-	var oldValue = product[index].quantity;
-	var newValue = 0;
-	
-	if(index == (product.length - 1)){
-		return oldValue;
-	}
-	else{
-		newValue = RemoveQuantityByIndex(index + 1);
-	}
-	
-	product[index].quantity = newValue;
-	return oldValue;
-}
-
-function FindProductIndex(code){
-	var index;
-	
-	for(var i=0; i < product.length; i++){
-		if(product[i].code == code){
-			index = i;
-			return i;
+	if(result == 0){
+		
+		if(newName == "" || newPrice == "" || newQuantity == "")
+			alert("Por favor preencha todos os itens!")
+		else{		
+			product[index].name = newName;
+			product[index].price = newPrice;
+			product[index].quantity = newQuantity;
 		}
-	}
-	return "X";
-}
 
-function NewProduct(newCode, newName, newPrice, newQuantity){
-	//não sei se vai funcionar. Não sei se product[newCode].code.Push(newCode) tá certo
-	if(CheckExistingCode(newCode) == 0){
-		product[newCode].code.Push(newCode);
-		product[newCode].name.Push(newName);
-		product[newCode].price.Push(newPrice);
-		product[newCode].quantity.Push(newQuantity);
-	
 		WriteProducts();
 	}
-	else{
+	else if(result == 1){
 		alert("Já existe um produto cadastrado com esse código!");
+	}
+	else{
+		alert("Código inválido!");
 	}
 }
 
-function AlterProduct(originalCode, alterCode, alterName, alterPrice, alterQuantity){
+function AlterProduct(){
+
+	alterCode = document.getElementById("alterCode").value || 0;
+	alterName = document.getElementById("alterName").value;
+	alterPrice = document.getElementById("alterPrice").value;
+	alterQuantity = document.getElementById("alterQuantity").value;
+
+	var index = alterCode - 1;
+	var result = CheckExistingCode(alterCode);
 	
-	for(var i=0; i < product.length; i++){
-		if(product[i].code == originalCode){
-			product[i].code = alterCode;
-			product[i].name = alterName;
-			product[i].price = alterPrice;
-			product[i].quantity = alterQuantity;
-			
-			break;
-		}
-		else if(i == (product.length - 1)){
-			alert("Não há produtos com esse código!");
-		}
+	if(result == 1){
+		if(alterName != "")
+			product[index].name = alterName;
+		
+		if(alterPrice != "")
+			product[index].price = alterPrice;
+		
+		if(alterQuantity != "")
+			product[index].quantity = alterQuantity;
+	}
+	else if(result == 0){
+		alert("Esse espaço está vazio. Você pode adicionar este produto utilizando a tela anterior.")
+	}
+	else{
+		alert("Código inválido!");
 	}
 	
 	WriteProducts();
@@ -169,12 +110,10 @@ function AlterProduct(originalCode, alterCode, alterName, alterPrice, alterQuant
 function CheckExistingCode(code){
 	var exists = 0;
 	
-	for(var i=0; i < product.length; i++){
-		if(product[i].code == code){
-			exists = 1;
-			break;
-		}
-	}
+	if(code > 9 || code < 1)
+		exists = 2;
+	else if(product[code - 1].name != "Vazio")
+		exists = 1;
 	
 	return exists;
 }

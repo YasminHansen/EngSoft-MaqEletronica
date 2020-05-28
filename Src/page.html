@@ -228,8 +228,8 @@
 							<h3><i class="fas fa-user"></i> Abastecedor</h3>
 						</div>
 						<div class="info-supplier-login">
-							<input placeholder="Código de acesso" class="form-control">
-							<input placeholder="Confirmar código de acesso" class="form-control" >
+							<input placeholder="Código de acesso" class="form-control" id="supplierLogin">
+							<input placeholder="Confirmar código de acesso" class="form-control" id="supplierPassword" type="password">
 							<button onclick="goToSupplierOptions()">Entrar</button>
 						</div>
 					</div>
@@ -262,21 +262,21 @@
 						<div class="supplier-insert-info">
 							<div>
 								<label class="col-5">Código: </label>
-								<input class="col-7 form-control">
+								<input class="col-7 form-control" id="newCode">
 							</div>
 							<div>
 								<label class="col-5">Nome: </label>
-								<input class="col-7 form-control">
+								<input class="col-7 form-control" id="newName">
 							</div>
 							<div>
 								<label class="col-5">Preço:</label>
-								<input class="col-7 form-control">
+								<input class="col-7 form-control" id="newPrice">
 							</div>
 							<div>
 								<label class="col-5">Quantidade:</label>
-								<input class="col-7 form-control">
+								<input class="col-7 form-control" id="newQuantity">
 							</div>
-							<button>Confirmar</button>
+							<button onClick="NewProduct()">Confirmar</button>
 						</div>
 					</div>
 
@@ -288,21 +288,21 @@
 						<div class="supplier-edit-info">
 							<div>
 								<label class="col-5">Código: </label>
-								<input class="col-7 form-control">
+								<input class="col-7 form-control" id="alterCode">
 							</div>
 							<div>
 								<label class="col-5">Nome: </label>
-								<input class="col-7 form-control">
+								<input class="col-7 form-control" id="alterName">
 							</div>
 							<div>
 								<label class="col-5">Preço:</label>
-								<input class="col-7 form-control">
+								<input class="col-7 form-control" id="alterPrice">
 							</div>
 							<div>
 								<label class="col-5">Quantidade:</label>
-								<input class="col-7 form-control">
+								<input class="col-7 form-control" id="alterQuantity">
 							</div>
-							<button>Confirmar</button>
+							<button onClick="AlterProduct()">Confirmar</button>
 						</div>
 					</div>
 
@@ -314,9 +314,9 @@
 						<div class="supplier-remove-info">
 							<div>
 								<label class="col-5">Código:</label>
-								<input class="col-7 form-control">
+								<input class="col-7 form-control" id="removeCode">
 							</div>
-							<button>Confirmar</button>
+							<button onClick="RemoveProduct()">Confirmar</button>
 						</div>
 					</div>
 				</div>
