@@ -1,6 +1,6 @@
 .external-options{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 
 }
 .external-options .modal-class{
