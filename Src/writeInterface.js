@@ -38,10 +38,10 @@ function WriteCart(){
 
 function WriteMachineMoney(){
 	machineMoney.CalculateTotal();
-	document.getElementById("showC50").innerHTML = machineMoney.c50;
-	document.getElementById("showC1").innerHTML = machineMoney.c1;
-	document.getElementById("showB2").innerHTML = machineMoney.b2;
-	document.getElementById("showB5").innerHTML = machineMoney.b5;
+	document.getElementById("showC50").innerHTML = "R$ " + (machineMoney.c50 * 0.5);
+	document.getElementById("showC1").innerHTML = "R$ " + machineMoney.c1;
+	document.getElementById("showB2").innerHTML = "R$ " + (machineMoney.b2 * 2);
+	document.getElementById("showB5").innerHTML = "R$ " + (machineMoney.b5 * 5);
 	document.getElementById("showMobile").innerHTML = "R$ " + machineMoney.mobile;
 	document.getElementById("showTotal").innerHTML = "R$ " + machineMoney.total;
 }

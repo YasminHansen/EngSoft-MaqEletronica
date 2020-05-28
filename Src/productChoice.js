@@ -49,17 +49,17 @@ function Confirm(){
 				if(product[i].quantity > 0){
 					alert("Produto selecionado, insira o dinheiro!");
 				}
-				else{
+				else if(product[i].quantity <= 0 && product[i].name != "Vazio"){
 					alert("Produto em falta!");
+					Cancel();
+				}
+				else{
+					alert("Não há produtos com esse código!");
 					Cancel();
 				}
 				break;
 			}
 		}
-	}
-	else{
-		alert("Nao ha produtos com esse codigo!")
-		Cancel();
 	}
 	
 	WriteAll();
