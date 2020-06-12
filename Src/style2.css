@@ -345,3 +345,50 @@ body{
     border-radius: 5px;
 }
 
+/*****COUPON****/
+#cancel-coupon, 
+#confirm-coupon{
+    display: none;
+}
+.insert-coupon{
+    display: flex;
+    background-color: #f76e68;
+    border-radius: 15px;
+    border-left: 1px solid #ffb2af;
+    border-top: 1px solid #ffb2af;
+    margin-top: 20px;
+    padding: 15px;
+    height: auto;
+}
+.insert-coupon button{
+    background-color: #f76e68;
+    border: 4px solid #fff;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.insert-coupon button:hover{
+    border-color: #000;
+    color: #000;
+}
+.insert-coupon .coupon-code{
+    background-color: #fff;
+    width: 100%;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-bottom: 0;
+    padding: 5px 3px;
+}
+.coupon-buttons{
+    display: none;
+}
+.kb-button-style{
+    box-shadow: 0px 0px 10px #ffcb00;
+}
+.confirm-button-style{
+    box-shadow: 0px 0px 10px #57ffd8;
+}
+.cancel-button-style{
+    box-shadow: 0px 0px 10px #ff5757;
+}

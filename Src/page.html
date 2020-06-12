@@ -68,7 +68,8 @@
 									<p id="productPrice"></p>
 								</div>
 							</div>
-							<div class="keyboard-buttons">
+							<!-- BOTÕES PARA SELECIONAR PRODUTO  -->
+							<div id="keyboard-buttons" class="keyboard-buttons">
 								<button type="button" onclick="PressedNumber(1)">1</button>
 								<button type="button" onclick="PressedNumber(2)">2</button>
 								<button type="button" onclick="PressedNumber(3)">3</button>
@@ -81,11 +82,33 @@
 								<button type="button" onclick="PressedNumber(8)">8</button>
 								<button type="button" onclick="PressedNumber(9)">9</button>
 								<br>
-								<button class="cancel" type="button" onclick="Cancel(1)">X</button>
+								<button type="button" onclick="Cancel(1)">X</button>
 								<button type="button" onclick="PressedNumber(0)">0</button>
-								<button class="confirm" type="button" onclick="Confirm(1)">✓</button>
+								<button type="button" onclick="Confirm(1)">✓</button>
+							</div>
+							<!-- BOTÕES PARA COLOCAR O CÓDIGO DO CUPOM -->
+							<div id="coupon-buttons" class="coupon-buttons keyboard-buttons">
+								<button class="kb-button" type="button" onclick="">1</button>
+								<button class="kb-button" type="button" onclick="">2</button>
+								<button class="kb-button" type="button" onclick="">3</button>
+								<br>
+								<button class="kb-button" type="button" onclick="">4</button>
+								<button class="kb-button" type="button" onclick="">5</button>
+								<button class="kb-button" type="button" onclick="">6</button>
+								<br>
+								<button class="kb-button" type="button" onclick="">7</button>
+								<button class="kb-button" type="button" onclick="">8</button>
+								<button class="kb-button" type="button" onclick="">9</button>
+								<br>
+								<button id="cancel-button" class="cancel" type="button" onclick="cancelCoupon()">X</button>
+								<button class="kb-button" type="button" onclick="">0</button>
+								<button id="confirm-button" class="confirm" type="button" onclick="confirmCoupon()">✓</button>
 							</div>
 						</div>
+					</div>
+					<div class="insert-coupon" id="insert-coupon" >
+						<button onclick="activeKeyboardCoupon()">CUPOM</button>
+						<p id="coupon-code"class="coupon-code">--</p>
 					</div>
 					<div class="keyboard-payment row">
 						<div class="keyboard-payment-options col-4">

@@ -1,15 +1,3 @@
-///Só tá setado na HOME
-///VENDOR:
-///     LOGIN
-///     OPTION
-///     REMOVE
-///ABASTECEDOR
-///     LOGIN
-///     OPTIONS
-///     ADD
-///     EDIT
-///     REMOVE
-
 var vendorLogin = 'admin';
 var vendorPassword = '123';
 
@@ -100,22 +88,41 @@ function goToSupplierRemove(){
     document.getElementById("supplier-remove").style.display = "block";
 }
 
-//FUNÇÕES DO TELEFONE
-// function closeModalTelephone(){
-//     document.getElementById("machine-mobile-products").style.display = "block";
-//     document.getElementById("machine-mobile-payment").style.display = "none";
-// }
-
-// function goToTelephonePayment(){
-//     document.getElementById("machine-mobile-products").style.display = "none";
-//     document.getElementById("machine-mobile-payment").style.display = "block";
-// }
-
-// function showHistoric(){
-//     document.getElementById("historic").classList.toggle('active');
-// }
-
 //FUNÇÕES DO HISTÓRICO
 function removeUserProduct(){
     document.getElementById("remove-products").classList.remove('user-product');
+}
+
+//FUNÇÕES DO CUPOM
+function activeKeyboardCoupon(){
+    document.getElementById("keyboard-buttons").style.display = "none";
+    document.getElementById("coupon-buttons").style.display = "block";
+
+    document.getElementById("cancel-button").classList.add("cancel-button-style");
+    document.getElementById("confirm-button").classList.add("confirm-button-style"); 
+
+    var kbButton = document.getElementsByClassName("kb-button");
+    for (var i = 0; i < kbButton.length; i++) {
+        kbButton[i].classList.add("kb-button-style");
+    }
+}
+
+function confirmCoupon(){
+    document.getElementById("cancel-button").classList.remove("cancel-button-style");
+    document.getElementById("confirm-button").classList.remove("confirm-button-style"); 
+
+    var kbButton = document.getElementsByClassName("kb-button");
+    for (var i = 0; i < kbButton.length; i++) {
+        kbButton[i].classList.remove("kb-button-style");
+    }
+}
+
+function cancelCoupon(){
+    document.getElementById("cancel-button").classList.remove("cancel-button-style");
+    document.getElementById("confirm-button").classList.remove("confirm-button-style"); 
+
+    var kbButton = document.getElementsByClassName("kb-button");
+    for (var i = 0; i < kbButton.length; i++) {
+        kbButton[i].classList.remove("kb-button-style");
+    } 
 }
