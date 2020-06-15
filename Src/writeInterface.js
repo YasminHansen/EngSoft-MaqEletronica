@@ -8,6 +8,7 @@ function WriteInput(){
 	document.getElementById("input").innerHTML = input;
 	document.getElementById("productName").innerHTML = productName;
 	document.getElementById("productPrice").innerHTML = '<i class="fas fa-dollar-sign"></i> ' + productPrice;
+	WriteDiscount();
 }
 
 /*Escreve os produtos e suas informações na máquina*/
@@ -48,6 +49,16 @@ function WriteMachineMoney(){
 	document.getElementById("showTotal").innerHTML = "R$ " + machineMoney.total;
 }
 
+function WriteCoupon(){
+	document.getElementById("coupon-code").innerHTML = couponCode;
+}
+
+function WriteDiscount(){
+	if(discount > 0 && !document.getElementById("productPrice").innerHTML.includes("Desconto")){
+		document.getElementById("productPrice").innerHTML += " - Desconto de R$" + discount;
+	}
+}
+
 /*Escreve tudo acima*/
 function WriteAll(){
 	WriteWallet();
@@ -57,4 +68,7 @@ function WriteAll(){
 	WriteMobileProducts();
 	WriteMachineMoney();
 	WriteCart();
+	WriteCoupon();
+	WriteDiscount();
 }
+

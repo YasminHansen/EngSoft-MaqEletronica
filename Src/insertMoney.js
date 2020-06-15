@@ -35,22 +35,22 @@ function AddMoney(moneyInserted){
 function ConfirmMoney(){
 	var result;
 	
-	if(balance >= productPrice){
-		if(balance > productPrice){
-			if((balance - productPrice) > maxChange){
+	if(balance >= (productPrice - discount)){
+		if(balance > (productPrice - discount)){
+			if((balance - (productPrice - discount)) > maxChange){
 				alert("Troco máximo atingido, por favor retire o dinheiro e use valores menores.");
 			}
 			else{
-				result = CheckChange(balance - productPrice);
+				result = CheckChange(balance - (productPrice - discount));
 				
 				if(result == 1){
 					for(var i=0; i < product.length; i++){
 						if(product[i].code == productCode){							
-							WriteLog("<div><p>" + product[i].name + " <i class='fas fa-dollar-sign'></i>" + product[i].price + "</p>" +
+							WriteLog("<div><p>" + product[i].name + " <i class='fas fa-dollar-sign'></i>" + (product[i].price - discount) + "</p>" +
 							"<p>Saldo <i class='fas fa-dollar-sign'></i>" + balance + "<p>" + 
-							"Troco <i class='fas fa-dollar-sign'></i>" + (balance-product[i].price) + "</div>");
+							"Troco <i class='fas fa-dollar-sign'></i>" + (balance - (product[i].price - discount)) + "</div>");
 							document.getElementById("remove-products").classList.add('user-product');
-							walletMoney += (balance-product[i].price);
+							walletMoney += (balance - (product[i].price - discount));
 							
 							machineMoney.c50 += balanceMoney.c50;
 							machineMoney.c1 += balanceMoney.c1;
@@ -58,7 +58,7 @@ function ConfirmMoney(){
 							machineMoney.b5 += balanceMoney.b5;
 							
 							balance = 0;
-
+							discount = 0;
 							product[i].quantity--;
 							
 							AddMoney(0);
@@ -76,7 +76,7 @@ function ConfirmMoney(){
 			for(var i=0; i < product.length; i++){
 				if(product[i].code == productCode){
 				
-					WriteLog("<div><p>" + product[i].name + " <i class='fas fa-dollar-sign'></i>" + product[i].price + "</p>" +
+					WriteLog("<div><p>" + product[i].name + " <i class='fas fa-dollar-sign'></i>" + (product[i].price - discount) + "</p>" +
 					"<p>Saldo <i class='fas fa-dollar-sign'></i>" + balance + "<p>" + 
 					"Troco <i class='fas fa-dollar-sign'></i>0</div>");
 					document.getElementById("remove-products").classList.add('user-product');
@@ -86,6 +86,7 @@ function ConfirmMoney(){
 					machineMoney.b5 += balanceMoney.b5;
 				
 					balance = 0;
+					discount = 0;
 					product[i].quantity--;					
 					AddMoney(0);					
 					Cancel();

@@ -110,19 +110,29 @@ function activeKeyboardCoupon(){
 function confirmCoupon(){
     document.getElementById("cancel-button").classList.remove("cancel-button-style");
     document.getElementById("confirm-button").classList.remove("confirm-button-style"); 
+	
+	document.getElementById("keyboard-buttons").style.display = "block";
+	document.getElementById("coupon-buttons").style.display = "none";
 
     var kbButton = document.getElementsByClassName("kb-button");
     for (var i = 0; i < kbButton.length; i++) {
         kbButton[i].classList.remove("kb-button-style");
     }
+	
+	ConfirmCoupon();
 }
 
 function cancelCoupon(){
     document.getElementById("cancel-button").classList.remove("cancel-button-style");
     document.getElementById("confirm-button").classList.remove("confirm-button-style"); 
+	
+	document.getElementById("keyboard-buttons").style.display = "block";
+	document.getElementById("coupon-buttons").style.display = "none";
 
     var kbButton = document.getElementsByClassName("kb-button");
     for (var i = 0; i < kbButton.length; i++) {
         kbButton[i].classList.remove("kb-button-style");
     } 
+	
+	CancelCoupon();
 }

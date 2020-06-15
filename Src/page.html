@@ -9,10 +9,10 @@
 		<link rel='stylesheet' href='style-restricarea.css'>
 		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-		<script type="text/javascript" src="data.js"></script>
+		<script type="text/javascript" src="data.js"></script><script type="text/javascript" src="couponsData.js"></script>
 		<script src='restrict-area.js'></script><script src='log.js'></script><script src='writeInterface.js'></script>
 		<script src='insertMoney.js'></script><script src='productChoice.js'></script><script src='vendorOptions.js'></script>
-		<script src='supplierOptions.js'></script><script src='mobileBuy.js'></script>
+		<script src='supplierOptions.js'></script><script src='mobileBuy.js'></script><script src='couponScript.js'></script>
 	</head>
 	<body>
 		<div class="container">
@@ -88,20 +88,20 @@
 							</div>
 							<!-- BOTÕES PARA COLOCAR O CÓDIGO DO CUPOM -->
 							<div id="coupon-buttons" class="coupon-buttons keyboard-buttons">
-								<button class="kb-button" type="button" onclick="">1</button>
-								<button class="kb-button" type="button" onclick="">2</button>
-								<button class="kb-button" type="button" onclick="">3</button>
+								<button class="kb-button" type="button" onclick="PressedNumberCoupon(1)">1</button>
+								<button class="kb-button" type="button" onclick="PressedNumberCoupon(2)">2</button>
+								<button class="kb-button" type="button" onclick="PressedNumberCoupon(3)">3</button>
 								<br>
-								<button class="kb-button" type="button" onclick="">4</button>
-								<button class="kb-button" type="button" onclick="">5</button>
-								<button class="kb-button" type="button" onclick="">6</button>
+								<button class="kb-button" type="button" onclick="PressedNumberCoupon(4)">4</button>
+								<button class="kb-button" type="button" onclick="PressedNumberCoupon(5)">5</button>
+								<button class="kb-button" type="button" onclick="PressedNumberCoupon(6)">6</button>
 								<br>
-								<button class="kb-button" type="button" onclick="">7</button>
-								<button class="kb-button" type="button" onclick="">8</button>
-								<button class="kb-button" type="button" onclick="">9</button>
+								<button class="kb-button" type="button" onclick="PressedNumberCoupon(7)">7</button>
+								<button class="kb-button" type="button" onclick="PressedNumberCoupon(8)">8</button>
+								<button class="kb-button" type="button" onclick="PressedNumberCoupon(9)">9</button>
 								<br>
 								<button id="cancel-button" class="cancel" type="button" onclick="cancelCoupon()">X</button>
-								<button class="kb-button" type="button" onclick="">0</button>
+								<button class="kb-button" type="button" onclick="PressedNumberCoupon(0)">0</button>
 								<button id="confirm-button" class="confirm" type="button" onclick="confirmCoupon()">✓</button>
 							</div>
 						</div>
