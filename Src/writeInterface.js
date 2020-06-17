@@ -54,8 +54,8 @@ function WriteCoupon(){
 }
 
 function WriteDiscount(){
-	if(discount > 0 && !document.getElementById("productDiscount").innerHTML.includes("Desconto")){
-		document.getElementById("productDiscount").innerHTML += " Desconto R$" + discount;
+	if(discount > 0 && !document.getElementById("productPrice").innerHTML.includes("Desconto")){
+		document.getElementById("productPrice").innerHTML += "<br>Desconto R$" + discount;
 	}
 }
 
