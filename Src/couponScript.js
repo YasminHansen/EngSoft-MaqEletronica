@@ -31,6 +31,7 @@ function ConfirmCoupon(){
 			}
 			else if(coupons[i].code == couponCode){
 				alert("Esse código de cupom está esgotado!");
+				couponFound = 1;
 				break;
 			}
 		}

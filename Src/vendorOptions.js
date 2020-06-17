@@ -29,3 +29,55 @@ function AddMachineMoney(){
 	
 	alert("Dinheiro adicionado com sucesso!");
 }
+
+function NewCoupon(){
+	newCode = document.getElementById("newCouponCode").value;
+	newValue = document.getElementById("newCouponValue").value;
+	newMsg = document.getElementById("newCouponMessage").value;
+	newQty = document.getElementById("newCouponQuantity").value;
+	
+	var index = -1;
+	
+	for(var i=0; i < coupons.length; i++){
+		if(coupons[i].code == 'XXX'){
+			index = i;
+			break;
+		}
+		else if(coupons[i].code == newCode){
+			alert("Esse código já existe, utilize outro código.");
+			break;
+		}
+		else if(i == (coupons.length - 1)){
+			alert("O número máximo de cupons foi atingido!");
+		}
+	}
+	
+	if(index != -1){
+		
+		if(newCode == "" || newValue == "" || newMsg == "" || newQty == "")
+			alert("Por favor preencha todos os itens!");
+		else if(newCode.length != 3)
+			alert("Por favor utilize um código com 3 dígitos.");
+		else if(newValue > 3)
+			alert("O desconto é alto demais!");
+		else if(newValue <= 0)
+			alert("Desconto inválido");
+		else{		
+			coupons[index].code = newCode;
+			coupons[index].discount = newValue;
+			coupons[index].message = newMsg;
+			coupons[index].quantity = newQty;
+			
+			document.getElementById("newCouponCode").value = "";
+			document.getElementById("newCouponValue").value = "";
+			document.getElementById("newCouponMessage").value = "";
+			document.getElementById("newCouponQuantity").value = "";
+			
+			alert("Cupom adicionado com sucesso!");
+			
+			couponsData = coupons;
+		}
+
+		WriteAll();
+	}
+}

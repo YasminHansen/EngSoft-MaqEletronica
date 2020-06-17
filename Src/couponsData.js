@@ -16,5 +16,47 @@ let couponsData = [
 	"message": "Parabéns! Você vendeu sua alma e ganhou um desconto na próxima compra!",
 	"discount": 2,
 	"quantity": 6
+},
+{
+    "code": 'XXX',
+	"message": "",
+	"discount": 0,
+	"quantity": 0
+},
+{
+    "code": 'XXX',
+	"message": "",
+	"discount": 0,
+	"quantity": 0
+},
+{
+    "code": 'XXX',
+	"message": "",
+	"discount": 0,
+	"quantity": 0
+},
+{
+    "code": 'XXX',
+	"message": "",
+	"discount": 0,
+	"quantity": 0
+},
+{
+    "code": 'XXX',
+	"message": "",
+	"discount": 0,
+	"quantity": 0
+},
+{
+    "code": 'XXX',
+	"message": "",
+	"discount": 0,
+	"quantity": 0
+},
+{
+    "code": 'XXX',
+	"message": "",
+	"discount": 0,
+	"quantity": 0
 }
 ];
