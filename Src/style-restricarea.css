@@ -85,7 +85,8 @@
 }
 /*---VENDOR REMOVE / ADD -----*/
 .modal-restrict-area .vendor-remove-value,
-.modal-restrict-area .vendor-add-value{
+.modal-restrict-area .vendor-add-value,
+.modal-restrict-area .vendor-add-coupon{
     display: none;
 }
 
@@ -148,6 +149,28 @@
 .modal-restrict-area .vendor-add-value button{
     margin-top: 20px;
     border-radius: 10px;
+}
+
+/*---- VENDOR COUPON ------*/
+.modal-restrict-area .vendor-add-coupon{
+    text-align: center;
+}
+.modal-restrict-area .vendor-add-coupon .add-coupon{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+}
+.modal-restrict-area .vendor-add-coupon .add-coupon div{
+    display: flex;
+    margin: 5px 0;
+    text-align: center;
+}
+.modal-restrict-area .vendor-add-coupon button{
+    margin-top: 20px;
+    border-radius: 10px;
+    width: max-content;
+    margin: 10px auto;
 }
 /*---------------------*/
 /*-------SUPPLIER------*/

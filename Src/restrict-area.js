@@ -10,6 +10,7 @@ function closeModal(){
     document.getElementById("vendor-options").style.display= "none";
     document.getElementById("vendor-remove").style.display= "none";
     document.getElementById("vendor-add").style.display= "none";
+    document.getElementById("vendor-add-coupon").style.display = "none";
     document.getElementById("supplier-login").style.display= "none";
     document.getElementById("supplier-options").style.display = "none";
     document.getElementById("supplier-insert").style.display = "none";
@@ -48,6 +49,11 @@ function goToVendorRemove(){
 function goToVendorAdd(){
     document.getElementById("vendor-options").style.display= "none";
     document.getElementById("vendor-add").style.display= "block";
+}
+
+function goVendorCoupon(){
+    document.getElementById("vendor-options").style.display = "none";
+    document.getElementById("vendor-add-coupon").style.display = "block";
 }
 
 //Funções das modais relacionadas ao ABASTECEDOR
