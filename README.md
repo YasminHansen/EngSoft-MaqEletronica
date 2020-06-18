@@ -17,6 +17,11 @@ A máquina tem dois usuários, o vendedor, que pode adicionar ou retirar dinheir
 |Vendedor	     | admin            | 123        |
 |Abastecedor     | admin            | 123        |
 
+## Cupons já existentes
+404
+420
+666
+
 ## Rodando o projeto
 Basta abrir a página "page.html"
 

@@ -62,6 +62,8 @@ function NewCoupon(){
 			alert("O desconto é alto demais!");
 		else if(newValue <= 0)
 			alert("Desconto inválido");
+		else if(newValue % 0.5 != 0)
+			alert("Por favor escolha um desconto válido para troco de 50 centavos e 1 real");
 		else{		
 			coupons[index].code = newCode;
 			coupons[index].discount = newValue;
